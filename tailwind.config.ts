@@ -8,6 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      spacing: {
+        128: "32rem",
+      },
+      colors: {
+        strongCyan: "hsl(171, 66%, 44%)",
+      },
+      fontSize: {
+        xxs: "0.5rem",
+      },
+      letterSpacing: {
+        doubleWide: ".2em",
+        tripleWide: ".3em",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
