@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const CARDS = [
   {
-    href: "/",
-    title: "Lorem Ipsum",
+    href: "/password-generator",
+    title: "Password Generator",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.",
   },
