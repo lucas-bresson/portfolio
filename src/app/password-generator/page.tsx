@@ -4,7 +4,7 @@ import { jetBrainsFont } from "@/app/ui/fonts";
 import { useState } from "react";
 import Image from "next/image";
 import { SubmitHandler, useForm } from "react-hook-form";
-import iconCopy from "../../../public/images/icon-copy.svg";
+import iconCopy from "../../../public/images/password-generator/icon-copy.svg";
 import generatePassword, { calculateStrength } from "./generatePassword";
 import Dots from "./dots";
 

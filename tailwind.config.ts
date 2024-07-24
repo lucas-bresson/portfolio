@@ -16,6 +16,12 @@ const config: Config = {
       },
       colors: {
         strongCyan: "hsl(171, 66%, 44%)",
+        // sneakers ecommerce
+        orange: "hsl(26, 100%, 55%)",
+        paleOrange: "hsl(25, 100%, 94%)",
+        veryDarkBlue: "hsl(220, 13%, 13%)",
+        darkGrayishBlue: "hsl(219, 9%, 45%)",
+        lightGrayishBlue: "hsl(223, 64%, 98%)",
       },
       fontSize: {
         xxxs: "0.5rem",

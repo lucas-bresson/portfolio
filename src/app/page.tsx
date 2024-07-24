@@ -8,8 +8,8 @@ const CARDS = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.",
   },
   {
-    href: "/",
-    title: "Lorem Ipsum",
+    href: "/sneakers-ecommerce",
+    title: "Sneakers",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.",
   },
