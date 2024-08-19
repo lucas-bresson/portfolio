@@ -74,7 +74,7 @@ export default function Page() {
   };
 
   return (
-    <div className="flex h-screen py-12 bg-gray-900 sm:items-center">
+    <div className="flex h-screen py-12 bg-gray-900 sm:items-center text-stone-100">
       <div
         className={`${jetBrainsFont.className} w-full mx-auto px-4 text-sm xs:px-12 sm:max-w-lg sm:pb-24 sm:text-base lg:text-xl lg:max-w-xl`}
       >
@@ -101,7 +101,7 @@ export default function Page() {
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="rounded-b-md bg-gray-600 px-3 py-4 text-sm text-stone-100 sm:text-base lg:text-xl">
+          <div className="rounded-b-md bg-gray-600 px-3 py-4 text-sm sm:text-base lg:text-xl">
             <div className="flex flex-row items-center justify-between">
               <label>Character Length</label>
               <p className="text-lime-400 font-bold text-lg">{length}</p>
