@@ -13,7 +13,7 @@ export default function Cart({
 }) {
   return (
     <div
-      className={`${open ? "absolute" : "hidden"} top-24 z-40 w-full px-2 rounded-lg shadow-xl md:w-80 md:right-12 lg:right-32`}
+      className={`${open ? "absolute" : "hidden"} top-24 z-40  bg-white w-full px-2 rounded-lg shadow-xl md:w-80 md:right-12 lg:right-32`}
     >
       <div className="h-72 bg-white rounded-lg">
         <div className="h-16 border-b border-gray px-6 pt-4 text-veryDarkBlue font-bold">
