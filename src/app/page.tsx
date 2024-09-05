@@ -14,8 +14,8 @@ const CARDS = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.",
   },
   {
-    href: "/",
-    title: "Lorem Ipsum",
+    href: "/bookmark",
+    title: "Bookmark",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.",
   },

@@ -16,12 +16,17 @@ const config: Config = {
       },
       colors: {
         strongCyan: "hsl(171, 66%, 44%)",
-        // sneakers ecommerce
+        // sneakers-ecommerce
         orange: "hsl(26, 100%, 55%)",
         paleOrange: "hsl(25, 100%, 94%)",
         veryDarkBlue: "hsl(220, 13%, 13%)",
         darkGrayishBlue: "hsl(219, 9%, 45%)",
         lightGrayishBlue: "hsl(223, 64%, 98%)",
+        // bookmark
+        softBlue: "hsl(231, 69%, 60%)",
+        softRed: "hsl(0, 94%, 66%)",
+        grayishBlue2: "hsl(229, 8%, 60%)",
+        veryDarkBlue2: "hsl(229, 31%, 21%)",
       },
       fontSize: {
         xxxs: "0.5rem",
@@ -42,6 +47,15 @@ const config: Config = {
       },
       content: {
         check: 'url("/images/icon-check.svg")',
+      },
+      keyframes: {
+        slideIn: {
+          "0%": { opacity: "0", transform: "scale(0.75)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+      },
+      animation: {
+        slideIn: "slideIn 0.3s ease-out forwards",
       },
     },
   },
