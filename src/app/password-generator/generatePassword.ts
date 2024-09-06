@@ -1,8 +1,8 @@
 const CHARACTERS = {
-  lowercase: "abcdefghijklmnopqrstuvwxyz",
-  uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  numbers: "1234567890",
-  symbols: "!@#$%^&*()_+-={}[];<>:",
+  lowercase: 'abcdefghijklmnopqrstuvwxyz',
+  uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+  numbers: '1234567890',
+  symbols: '!@#$%^&*()_+-={}[];<>:',
 };
 
 export function calculateStrength({
@@ -37,21 +37,21 @@ export default function generatePassword(options?: {
   const numbers = options?.numbers || true;
   const symbols = options?.symbols || false;
 
-  let password = "";
-  let dictionary = CHARACTERS["lowercase"];
+  let password = '';
+  let dictionary = CHARACTERS['lowercase'];
 
   if (!options) {
-    dictionary += CHARACTERS["uppercase"];
-    dictionary += CHARACTERS["numbers"];
+    dictionary += CHARACTERS['uppercase'];
+    dictionary += CHARACTERS['numbers'];
   }
   if (uppercase) {
-    dictionary += CHARACTERS["uppercase"];
+    dictionary += CHARACTERS['uppercase'];
   }
   if (numbers) {
-    dictionary += CHARACTERS["numbers"];
+    dictionary += CHARACTERS['numbers'];
   }
   if (symbols) {
-    dictionary += CHARACTERS["symbols"];
+    dictionary += CHARACTERS['symbols'];
   }
 
   for (let i = 0; i < length; i++) {

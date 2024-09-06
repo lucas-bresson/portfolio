@@ -1,6 +1,6 @@
-import Image from "next/image";
-import thumbnailProduct1 from "../../../../../public/sneakers-ecommerce/image-product-1-thumbnail.jpg";
-import iconDelete from "../../../../../public/sneakers-ecommerce/icon-delete.svg";
+import Image from 'next/image';
+import thumbnailProduct1 from '../../../../../public/sneakers-ecommerce/image-product-1-thumbnail.jpg';
+import iconDelete from '../../../../../public/sneakers-ecommerce/icon-delete.svg';
 
 export default function Cart({
   open,
@@ -13,20 +13,20 @@ export default function Cart({
 }) {
   return (
     <div
-      className={`${open ? "absolute" : "hidden"} top-24 z-40  bg-white w-full px-2 rounded-lg shadow-xl md:w-80 md:right-12 lg:right-32`}
+      className={`${open ? 'absolute' : 'hidden'} top-24 z-40 w-full rounded-lg bg-white px-2 shadow-xl md:right-12 md:w-80 lg:right-32`}
     >
-      <div className="h-72 bg-white rounded-lg">
-        <div className="h-16 border-b border-gray px-6 pt-4 text-veryDarkBlue font-bold">
+      <div className="h-72 rounded-lg bg-white">
+        <div className="border-gray h-16 border-b px-6 pt-4 font-bold text-veryDarkBlue">
           Cart
         </div>
         {count > 0 ? (
           <div className="px-6">
-            <div className="flex justify-between items-center">
+            <div className="flex items-center justify-between">
               <div className="flex flex-row items-center space-x-6">
                 <Image
                   src={thumbnailProduct1}
                   alt="product-1"
-                  className="w-14 h-14 rounded-lg"
+                  className="h-14 w-14 rounded-lg"
                 />
                 <div className="py-8">
                   <div>Fall Limited Edition Sneakers</div>
@@ -42,15 +42,15 @@ export default function Cart({
                 src={iconDelete}
                 onClick={removeItemFromCart}
                 alt="remove-from-cart"
-                className="w-4 h-4 cursor-pointer"
+                className="h-4 w-4 cursor-pointer"
               />
             </div>
-            <button className="w-full flex justify-center items-center bg-orange h-14 rounded-xl shadow-lg hover:opacity-80">
-              <div className="text-veryDarkBlue font-bold">Checkout</div>
+            <button className="flex h-14 w-full items-center justify-center rounded-xl bg-orange shadow-lg hover:opacity-80">
+              <div className="font-bold text-veryDarkBlue">Checkout</div>
             </button>
           </div>
         ) : (
-          <div className="h-56 flex justify-center items-center font-bold">
+          <div className="flex h-56 items-center justify-center font-bold">
             Your cart is empty.
           </div>
         )}
