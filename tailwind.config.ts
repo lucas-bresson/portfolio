@@ -59,6 +59,10 @@ const config: Config = {
       animation: {
         slideIn: 'slideIn 0.3s ease-out forwards',
       },
+      backgroundImage: (theme) => ({
+        // bookmark
+        dots: "url('/../../../../bookmark/bg-dots.svg')",
+      }),
     },
   },
   plugins: [],
