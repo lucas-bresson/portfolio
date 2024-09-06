@@ -20,8 +20,8 @@ const CARDS = [
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.',
   },
   {
-    href: '/',
-    title: 'Lorem Ipsum',
+    href: '/memory-game',
+    title: 'Memory Game',
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.',
   },
