@@ -43,3 +43,23 @@
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
+
+.loopstudios-button {
+  @apply my-0 border-2 border-black px-10 py-2 font-bold uppercase tracking-tripleWide hover:bg-black hover:text-white;
+}
+
+.loopstudios-items-container {
+  @apply flex w-full flex-col justify-between space-y-6 text-2xl uppercase text-white md:flex-row md:space-x-8 md:space-y-0;
+}
+
+.loopstudios-item {
+  @apply relative overflow-hidden md:w-1/4;
+}
+
+.loopstudios-item-gradient {
+  @apply absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70;
+}
+
+.loopstudios-h5 {
+  @apply absolute bottom-4 w-52 px-6 duration-200 group-hover:scale-110 group-hover:text-black md:bottom-8 md:px-10;
+}

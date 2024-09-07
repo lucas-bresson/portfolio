@@ -25,6 +25,12 @@ const CARDS = [
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.',
   },
+  {
+    href: '/loopstudios',
+    title: 'Loopstudios',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.',
+  },
 ];
 
 export default function Home() {
