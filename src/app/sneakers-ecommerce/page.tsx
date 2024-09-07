@@ -92,7 +92,7 @@ export default function Page() {
           </Link>
         </div>
 
-        <div className="box-border hidden h-20 space-x-6 pt-8 text-sm md:flex">
+        <div className="box-border hidden h-20 space-x-6 pt-8 md:flex">
           {['Collections', 'Men', 'Women', 'About', 'Contact'].map(
             (menuItem) => (
               <a
@@ -111,7 +111,7 @@ export default function Page() {
             className="relative cursor-pointer"
             onClick={() => setCartOpen((prevState) => !prevState)}
           >
-            <Image src={iconCart} alt="cart" className="w-6 md:w-5" />
+            <Image src={iconCart} alt="cart" className="w-6" />
             {cartItemCount > 0 && (
               <span className="absolute -right-2 -top-1 flex h-4 w-5 items-center justify-center rounded-full bg-orange text-xxs font-bold text-white">
                 {cartItemCount}
@@ -119,7 +119,7 @@ export default function Page() {
             )}
           </div>
           <div className="cursor-pointer rounded-full border-2 hover:border-orange">
-            <Image src={imageAvatar} alt="avatar" className="w-7 md:w-8" />
+            <Image src={imageAvatar} alt="avatar" className="w-7 md:w-9" />
           </div>
         </div>
       </div>
@@ -130,18 +130,18 @@ export default function Page() {
         removeItemFromCart={removeItemFromCart}
       />
 
-      <div className="mb-20 flex flex-col items-center md:mx-8 md:mt-16 md:flex-row md:space-x-12 md:px-12 lg:mx-16 lg:items-start lg:px-32">
-        <div className="flex-1 lg:max-w-md">
+      <div className="mb-20 flex flex-col items-center justify-center md:mx-8 md:mt-16 md:flex-row md:space-x-12 md:px-12 lg:mx-16 lg:items-start lg:px-32">
+        <div className="flex-1 lg:max-w-xl">
           <Carousel slides={PRODUCT_SLIDES} />
         </div>
-        <div className="flex-1 px-6 lg:mt-16">
-          <h1 className="text-md mt-7 pb-3 font-bold uppercase tracking-widest md:mt-0 md:text-xxs">
+        <div className="flex-1 px-6 lg:mt-16 lg:max-w-xl">
+          <h1 className="mt-7 pb-3 text-xs font-bold uppercase tracking-widest md:mt-0">
             Sneaker company
           </h1>
-          <h2 className="pb-4 text-4xl font-bold text-veryDarkBlue md:text-3xl">
+          <h2 className="pb-4 text-4xl font-bold text-veryDarkBlue md:text-4xl">
             Fall Limited Edition Sneakers
           </h2>
-          <p className="pb-6 text-lg md:text-sm">
+          <p className="pb-6 text-lg md:text-base">
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they&apos;ll withstand
             everything the weather can offer.
@@ -173,7 +173,7 @@ export default function Page() {
             </div>
             <button
               onClick={addItemToCart}
-              className="mt-3 flex h-14 w-full items-center justify-center space-x-4 rounded-xl bg-orange px-2 shadow-lg hover:opacity-80 md:mt-0"
+              className="mt-3 flex h-14 w-full items-center justify-center space-x-4 rounded-xl bg-orange px-2 shadow-lg hover:opacity-80 md:mt-0 md:max-w-sm"
             >
               <Image src={iconCart} alt="icon-cart" className="h-4 w-4" />
               <div className="font-bold text-veryDarkBlue">Add to cart</div>

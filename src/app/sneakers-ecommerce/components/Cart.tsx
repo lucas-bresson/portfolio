@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import thumbnailProduct1 from '../../../../../public/sneakers-ecommerce/image-product-1-thumbnail.jpg';
-import iconDelete from '../../../../../public/sneakers-ecommerce/icon-delete.svg';
+import thumbnailProduct1 from '../../../../public/sneakers-ecommerce/image-product-1-thumbnail.jpg';
+import iconDelete from '../../../../public/sneakers-ecommerce/icon-delete.svg';
 
 export default function Cart({
   open,
