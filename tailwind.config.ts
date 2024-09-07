@@ -15,7 +15,6 @@ const config: Config = {
         128: '32rem',
       },
       colors: {
-        strongCyan: 'hsl(171, 66%, 44%)',
         // sneakers-ecommerce
         orange: 'hsl(26, 100%, 55%)',
         paleOrange: 'hsl(25, 100%, 94%)',
@@ -29,6 +28,11 @@ const config: Config = {
         veryDarkBlue2: 'hsl(229, 31%, 21%)',
         // memory-game
         darkBlue: 'hsl(205, 45%, 15%)',
+        // clipboard
+        strongCyan: 'hsl(171, 66%, 44%)',
+        lightBlue: 'hsl(233, 100%, 69%)',
+        // darkGrayishBlue: 'hsl(210, 10%, 33%)',
+        grayishBlue: 'hsl(201, 11%, 66%)',
       },
       fontSize: {
         xxxs: '0.5rem',

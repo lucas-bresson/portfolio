@@ -2,64 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-.hamburger {
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-  transition: all 0.25s;
-  position: relative;
-}
+@layer components {
+  .hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+  }
 
-.hamburger-top,
-.hamburger-middle,
-.hamburger-bottom {
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  top: 0;
-  left: 0;
-  transform: rotate(0);
-  transition: all 0.5s;
-}
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
 
-.hamburger-middle {
-  transform: translateY(7px);
-}
+  .hamburger-middle {
+    transform: translateY(7px);
+  }
 
-.hamburger-bottom {
-  transform: translateY(14px);
-}
+  .hamburger-bottom {
+    transform: translateY(14px);
+  }
 
-.open {
-  transform: rotate(90deg);
-}
+  .open {
+    transform: rotate(90deg);
+  }
 
-.open .hamburger-top {
-  transform: rotate(45deg) translateY(6px) translateX(6px);
-}
-.open .hamburger-middle {
-  display: none;
-}
-.open .hamburger-bottom {
-  transform: rotate(-45deg) translateY(6px) translateX(-6px);
-}
+  .open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+  .open .hamburger-middle {
+    display: none;
+  }
+  .open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  }
 
-.loopstudios-button {
-  @apply my-0 border-2 border-black px-10 py-2 font-bold uppercase tracking-tripleWide hover:bg-black hover:text-white;
-}
+  .loopstudios-button {
+    @apply my-0 border-2 border-black px-10 py-2 font-bold uppercase tracking-tripleWide hover:bg-black hover:text-white;
+  }
 
-.loopstudios-items-container {
-  @apply flex w-full flex-col justify-between space-y-6 text-2xl uppercase text-white md:flex-row md:space-x-8 md:space-y-0;
-}
+  .loopstudios-items-container {
+    @apply flex w-full flex-col justify-between space-y-6 text-2xl uppercase text-white md:flex-row md:space-x-8 md:space-y-0;
+  }
 
-.loopstudios-item {
-  @apply relative overflow-hidden md:w-1/4;
-}
+  .loopstudios-item {
+    @apply relative overflow-hidden md:w-1/4;
+  }
 
-.loopstudios-item-gradient {
-  @apply absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70;
-}
+  .loopstudios-item-gradient {
+    @apply absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70;
+  }
 
-.loopstudios-h5 {
-  @apply absolute bottom-4 w-52 px-6 duration-200 group-hover:scale-110 group-hover:text-black md:bottom-8 md:px-10;
+  .loopstudios-h5 {
+    @apply absolute bottom-4 w-52 px-6 duration-200 group-hover:scale-110 group-hover:text-black md:bottom-8 md:px-10;
+  }
+
+  .clipboard-section {
+    @apply mx-auto max-w-6xl px-10 text-center;
+  }
+
+  .clipboard-h3 {
+    @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
+  }
+
+  .clipboard-h5 {
+    @apply mb-2 text-2xl font-bold text-darkGrayishBlue;
+  }
+
+  .clipboard-section-content {
+    @apply text-grayishBlue mx-auto max-w-3xl text-center text-xl leading-9;
+  }
+
+  .clipboard-button-container {
+    @apply flex w-full flex-col justify-center space-y-6 text-xl text-white md:flex-row md:space-x-4 md:space-y-0;
+  }
 }

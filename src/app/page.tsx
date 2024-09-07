@@ -31,6 +31,12 @@ const CARDS = [
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.',
   },
+  {
+    href: '/clipboard',
+    title: 'Clipboard',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.',
+  },
 ];
 
 export default function Home() {
