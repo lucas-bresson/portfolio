@@ -84,7 +84,6 @@ export default function CreationsSection() {
           />
         </div>
 
-        {/* Items Container 2 */}
         <div className="loopstudios-items-container mt-10">
           <CreationItem
             text="From Up Above VR"

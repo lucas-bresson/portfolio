@@ -8,7 +8,7 @@ export default function FeaturesSection() {
       <div
         className={`container relative mx-auto my-32 flex max-w-6xl flex-col px-6 text-gray-900 md:flex-row md:px-0`}
       >
-        <Image src={interactiveDesktop} alt="" />
+        <Image src={interactiveDesktop} alt="interactive VR" />
         <div className="top-48 flex flex-col items-center bg-white pr-0 md:absolute md:right-0 md:items-start md:py-20 md:pl-20">
           <h2
             className={`${josefinSans.className} mb-6 mt-10 max-w-lg text-center text-4xl uppercase text-gray-900 md:mt-0 md:text-left md:text-5xl`}
