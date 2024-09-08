@@ -4,6 +4,7 @@ import {
   Rubik,
   Josefin_Sans,
   Alata,
+  Open_Sans,
 } from 'next/font/google';
 
 export const jetBrainsFont = JetBrains_Mono({
@@ -26,5 +27,10 @@ export const josefinSans = Josefin_Sans({
 
 export const alata = Alata({
   weight: ['400'],
+  subsets: ['latin'],
+});
+
+export const openSans = Open_Sans({
+  weight: ['400', '700'],
   subsets: ['latin'],
 });

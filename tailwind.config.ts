@@ -33,19 +33,17 @@ const config: Config = {
         lightBlue: 'hsl(233, 100%, 69%)',
         // darkGrayishBlue: 'hsl(210, 10%, 33%)',
         grayishBlue: 'hsl(201, 11%, 66%)',
+        // fylo
+        darkBlue1: 'hsl(218, 28%, 13%)',
+        darkBlue2: 'hsl(216, 53%, 9%)',
+        darkBlue3: 'hsl(219, 30%, 18%)',
+        accentCyan: 'hsl(176, 68%, 64%)',
+        accentBlue: 'hsl(198, 60%, 50%)',
+        lightRed: 'hsl(0, 100%, 63%)',
       },
       fontSize: {
         xxxs: '0.5rem',
         xxs: '0.625rem',
-        //   text-xxxs    font-size: 0.5rem; /* 8px */
-        //   text-xxs     font-size: 0.625rem; /* 10px */
-        //   text-xs	    font-size: 0.75rem; /* 12px */
-        //   text-sm	    font-size: 0.875rem; /* 14px */
-        //   text-base	  font-size: 1rem; /* 16px */
-        //   text-lg	    font-size: 1.125rem; /* 18px */
-        //   text-xl	    font-size: 1.25rem; /* 20px */
-        //   text-2xl	    font-size: 1.5rem; /* 24px */
-        //   text-3xl	    font-size: 1.875rem; /* 30px */
       },
       letterSpacing: {
         doubleWide: '.2em',
@@ -66,6 +64,11 @@ const config: Config = {
       backgroundImage: (theme) => ({
         // bookmark
         dots: "url('/../../../../bookmark/bg-dots.svg')",
+        // fylo
+        'logo-dark-mode': "url('/../../../../fylo/logo-dark-mode.svg')",
+        'logo-light-mode': "url('/../../../../fylo/logo-light-mode.svg')",
+        'curvy-dark-mode': "url('/../../../../fylo/bg-curvy-dark-mode.svg')",
+        'curvy-light-mode': "url('/../../../../fylo/bg-curvy-light-mode.svg')",
       }),
     },
   },

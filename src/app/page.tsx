@@ -37,6 +37,12 @@ const CARDS = [
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.',
   },
+  {
+    href: '/fylo',
+    title: 'Fylo',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.',
+  },
 ];
 
 export default function Home() {
