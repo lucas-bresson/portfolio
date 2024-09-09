@@ -43,6 +43,12 @@ const CARDS = [
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.',
   },
+  {
+    href: '/shortly',
+    title: 'Shortly',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sint.',
+  },
 ];
 
 export default function Home() {

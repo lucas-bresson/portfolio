@@ -40,6 +40,13 @@ const config: Config = {
         accentCyan: 'hsl(176, 68%, 64%)',
         accentBlue: 'hsl(198, 60%, 50%)',
         lightRed: 'hsl(0, 100%, 63%)',
+        // shortly
+        cyan: 'hsl(180, 66%, 49%)',
+        cyanLight: 'hsl(180, 66%, 69%)',
+        darkViolet: 'hsl(257, 27%, 26%)',
+        red: 'hsl(0, 87%, 67%)',
+        grayishViolet: 'hsl(257, 7%, 63%)',
+        veryDarkViolet: 'hsl(260, 8%, 14%) ',
       },
       fontSize: {
         xxxs: '0.5rem',

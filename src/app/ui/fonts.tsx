@@ -5,6 +5,7 @@ import {
   Josefin_Sans,
   Alata,
   Open_Sans,
+  Poppins,
 } from 'next/font/google';
 
 export const jetBrainsFont = JetBrains_Mono({
@@ -32,5 +33,10 @@ export const alata = Alata({
 
 export const openSans = Open_Sans({
   weight: ['400', '700'],
+  subsets: ['latin'],
+});
+
+export const poppins = Poppins({
+  weight: ['400', '500', '700'],
   subsets: ['latin'],
 });
