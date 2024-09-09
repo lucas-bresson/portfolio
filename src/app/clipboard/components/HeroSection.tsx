@@ -24,7 +24,7 @@ export default function HeroSection() {
           </a>
           <a
             href="#"
-            className="bg-lightBlue rounded-full p-4 px-8 shadow-lg duration-200 hover:-translate-y-0.5 hover:opacity-80"
+            className="rounded-full bg-lightBlue p-4 px-8 shadow-lg duration-200 hover:-translate-y-0.5 hover:opacity-80"
           >
             Download for Mac
           </a>

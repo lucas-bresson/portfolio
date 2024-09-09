@@ -78,10 +78,15 @@
   }
 
   .clipboard-section-content {
-    @apply text-grayishBlue mx-auto max-w-3xl text-center text-xl leading-9;
+    @apply mx-auto max-w-3xl text-center text-xl leading-9 text-grayishBlue;
   }
 
   .clipboard-button-container {
     @apply flex w-full flex-col justify-center space-y-6 text-xl text-white md:flex-row md:space-x-4 md:space-y-0;
+  }
+
+  .ficon:hover {
+    filter: invert(79%) sepia(61%) saturate(464%) hue-rotate(130deg)
+      brightness(89%) contrast(85%);
   }
 }
