@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import logo from '../../../../public/bookmark/logo-bookmark.svg';
+import logo from '/public/bookmark/logo-bookmark.svg';
 import { useState } from 'react';
 
 export default function NavMenu() {
@@ -10,7 +10,7 @@ export default function NavMenu() {
       <div className="my-6 flex items-center justify-between space-x-20">
         <Image id="logo" src={logo} alt="logo" />
 
-        <div className="text-grayishBlue hidden items-center space-x-10 uppercase md:flex">
+        <div className="hidden items-center space-x-10 uppercase text-grayishBlue md:flex">
           <a href="#features" className="tracking-widest hover:text-softRed">
             Features
           </a>

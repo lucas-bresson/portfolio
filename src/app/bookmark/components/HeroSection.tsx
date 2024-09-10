@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import illustrationHero from '../../../../public/bookmark/illustration-hero.svg';
+import illustrationHero from '/public/bookmark/illustration-hero.svg';
 
 export default function HeroSection() {
   return (

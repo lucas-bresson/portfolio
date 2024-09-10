@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image, { StaticImageData } from 'next/image';
-import iconPrevious from '../../../../public/sneakers-ecommerce/icon-previous.svg';
-import iconNext from '../../../../public/sneakers-ecommerce/icon-next.svg';
+import iconPrevious from '/public/sneakers-ecommerce/icon-previous.svg';
+import iconNext from '/public/sneakers-ecommerce/icon-next.svg';
 
 const Carousel = ({
   slides,

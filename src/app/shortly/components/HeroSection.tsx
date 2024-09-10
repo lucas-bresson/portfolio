@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import hero from '../../../../public/shortly/illustration-working.svg';
+import hero from '/public/shortly/illustration-working.svg';
 
 export default function HeroSection() {
   return (
@@ -16,7 +16,7 @@ export default function HeroSection() {
           <div className="mx-auto lg:mx-0">
             <a
               href="#"
-              className="bg-cyan rounded-full px-10 py-5 text-2xl font-bold text-white hover:opacity-70 lg:py-4"
+              className="rounded-full bg-cyan px-10 py-5 text-2xl font-bold text-white hover:opacity-70 lg:py-4"
             >
               Get Started
             </a>

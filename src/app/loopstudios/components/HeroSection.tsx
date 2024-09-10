@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { josefinSans, alata } from '@/app/ui/fonts';
-import logo from '../../../../public/loopstudios/logo.svg';
+import logo from '/public/loopstudios/logo.svg';
 
 export default function HeroSection() {
   const [hamburger, setHamburger] = useState(false);

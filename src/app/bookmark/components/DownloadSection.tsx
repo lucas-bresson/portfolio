@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import logoChrome from '../../../../public/bookmark/logo-chrome.svg';
-import logoFirefox from '../../../../public/bookmark/logo-firefox.svg';
-import logoOpera from '../../../../public/bookmark/logo-opera.svg';
+import logoChrome from '/public/bookmark/logo-chrome.svg';
+import logoFirefox from '/public/bookmark/logo-firefox.svg';
+import logoOpera from '/public/bookmark/logo-opera.svg';
 
 const DownloadExtensionButton = () => (
   <div className="bg-dots bg-repeat-x px-6 pt-6 capitalize">

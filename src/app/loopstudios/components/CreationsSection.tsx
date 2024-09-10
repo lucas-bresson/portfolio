@@ -1,21 +1,21 @@
 import Image, { StaticImageData } from 'next/image';
 import { josefinSans, alata } from '@/app/ui/fonts';
-import imageDeepEarth from '../../../../public/loopstudios/desktop/image-deep-earth.jpg';
-import imageNightArcade from '../../../../public/loopstudios/desktop/image-night-arcade.jpg';
-import imageSoccerTeam from '../../../../public/loopstudios/desktop/image-soccer-team.jpg';
-import imageGrid from '../../../../public/loopstudios/desktop/image-grid.jpg';
-import imageFromAbove from '../../../../public/loopstudios/desktop/image-from-above.jpg';
-import imagePocket from '../../../../public/loopstudios/desktop/image-pocket-borealis.jpg';
-import imageCuriosity from '../../../../public/loopstudios/desktop/image-curiosity.jpg';
-import imageFisheye from '../../../../public/loopstudios/desktop/image-fisheye.jpg';
-import imageDeepEarthMobile from '../../../../public/loopstudios/mobile/image-deep-earth.jpg';
-import imageNightArcadeMobile from '../../../../public/loopstudios/mobile/image-night-arcade.jpg';
-import imageSoccerTeamMobile from '../../../../public/loopstudios/mobile/image-soccer-team.jpg';
-import imageGridMobile from '../../../../public/loopstudios/mobile/image-grid.jpg';
-import imageFromAboveMobile from '../../../../public/loopstudios/mobile/image-from-above.jpg';
-import imagePocketMobile from '../../../../public/loopstudios/mobile/image-pocket-borealis.jpg';
-import imageCuriosityMobile from '../../../../public/loopstudios/mobile/image-curiosity.jpg';
-import imageFisheyeMobile from '../../../../public/loopstudios/mobile/image-fisheye.jpg';
+import imageDeepEarth from '/public/loopstudios/desktop/image-deep-earth.jpg';
+import imageNightArcade from '/public/loopstudios/desktop/image-night-arcade.jpg';
+import imageSoccerTeam from '/public/loopstudios/desktop/image-soccer-team.jpg';
+import imageGrid from '/public/loopstudios/desktop/image-grid.jpg';
+import imageFromAbove from '/public/loopstudios/desktop/image-from-above.jpg';
+import imagePocket from '/public/loopstudios/desktop/image-pocket-borealis.jpg';
+import imageCuriosity from '/public/loopstudios/desktop/image-curiosity.jpg';
+import imageFisheye from '/public/loopstudios/desktop/image-fisheye.jpg';
+import imageDeepEarthMobile from '/public/loopstudios/mobile/image-deep-earth.jpg';
+import imageNightArcadeMobile from '/public/loopstudios/mobile/image-night-arcade.jpg';
+import imageSoccerTeamMobile from '/public/loopstudios/mobile/image-soccer-team.jpg';
+import imageGridMobile from '/public/loopstudios/mobile/image-grid.jpg';
+import imageFromAboveMobile from '/public/loopstudios/mobile/image-from-above.jpg';
+import imagePocketMobile from '/public/loopstudios/mobile/image-pocket-borealis.jpg';
+import imageCuriosityMobile from '/public/loopstudios/mobile/image-curiosity.jpg';
+import imageFisheyeMobile from '/public/loopstudios/mobile/image-fisheye.jpg';
 
 const CreationItem = ({
   text,

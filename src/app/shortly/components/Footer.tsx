@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import logo from '../../../../public/shortly/logo.svg';
-import iconFacebook from '../../../../public/shortly/icon-facebook.svg';
-import iconTwitter from '../../../../public/shortly/icon-twitter.svg';
-import iconPinterest from '../../../../public/shortly/icon-pinterest.svg';
-import iconInstagram from '../../../../public/shortly/icon-instagram.svg';
+import logo from '/public/shortly/logo.svg';
+import iconFacebook from '/public/shortly/icon-facebook.svg';
+import iconTwitter from '/public/shortly/icon-twitter.svg';
+import iconPinterest from '/public/shortly/icon-pinterest.svg';
+import iconInstagram from '/public/shortly/icon-instagram.svg';
 
 export default function Footer() {
   return (
@@ -16,19 +16,19 @@ export default function Footer() {
             <div className="flex flex-col items-center space-y-3 md:items-start">
               <a
                 href="#"
-                className="text-grayishViolet hover:text-cyan capitalize"
+                className="capitalize text-grayishViolet hover:text-cyan"
               >
                 Link shortening
               </a>
               <a
                 href="#"
-                className="text-grayishViolet hover:text-cyan capitalize"
+                className="capitalize text-grayishViolet hover:text-cyan"
               >
                 Branded links
               </a>
               <a
                 href="#"
-                className="text-grayishViolet hover:text-cyan capitalize"
+                className="capitalize text-grayishViolet hover:text-cyan"
               >
                 Analytics
               </a>
@@ -42,19 +42,19 @@ export default function Footer() {
             <div className="flex flex-col items-center space-y-3 md:items-start">
               <a
                 href="#"
-                className="text-grayishViolet hover:text-cyan capitalize"
+                className="capitalize text-grayishViolet hover:text-cyan"
               >
                 Blog
               </a>
               <a
                 href="#"
-                className="text-grayishViolet hover:text-cyan capitalize"
+                className="capitalize text-grayishViolet hover:text-cyan"
               >
                 Developers
               </a>
               <a
                 href="#"
-                className="text-grayishViolet hover:text-cyan capitalize"
+                className="capitalize text-grayishViolet hover:text-cyan"
               >
                 Support
               </a>
@@ -66,25 +66,25 @@ export default function Footer() {
             <div className="flex flex-col items-center space-y-3 md:items-start">
               <a
                 href="#"
-                className="text-grayishViolet hover:text-cyan capitalize"
+                className="capitalize text-grayishViolet hover:text-cyan"
               >
                 About
               </a>
               <a
                 href="#"
-                className="text-grayishViolet hover:text-cyan capitalize"
+                className="capitalize text-grayishViolet hover:text-cyan"
               >
                 Our Team
               </a>
               <a
                 href="#"
-                className="text-grayishViolet hover:text-cyan capitalize"
+                className="capitalize text-grayishViolet hover:text-cyan"
               >
                 Careers
               </a>
               <a
                 href="#"
-                className="text-grayishViolet hover:text-cyan capitalize"
+                className="capitalize text-grayishViolet hover:text-cyan"
               >
                 Contact
               </a>

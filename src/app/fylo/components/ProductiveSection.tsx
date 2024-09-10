@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import iconArrow from '../../../../public/fylo/icon-arrow.svg';
-import illustrationStayProductive from '../../../../public/fylo/illustration-stay-productive.png';
+import iconArrow from '/public/fylo/icon-arrow.svg';
+import illustrationStayProductive from '/public/fylo/illustration-stay-productive.png';
 
 export default function ProductiveSection() {
   return (
@@ -25,7 +25,7 @@ export default function ProductiveSection() {
             </p>
           </div>
 
-          <div className="border-accentCyan mt-4 flex flex-row items-center space-x-2 border-b hover:cursor-pointer">
+          <div className="mt-4 flex flex-row items-center space-x-2 border-b border-accentCyan hover:cursor-pointer">
             <a href="#" className="text-accentCyan">
               See how Fylo works
             </a>

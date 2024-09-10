@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import bgQuotes from '../../../../public/fylo/bg-quotes.png';
-import profile1 from '../../../../public/fylo/profile-1.jpg';
-import profile2 from '../../../../public/fylo/profile-2.jpg';
-import profile3 from '../../../../public/fylo/profile-3.jpg';
+import bgQuotes from '/public/fylo/bg-quotes.png';
+import profile1 from '/public/fylo/profile-1.jpg';
+import profile2 from '/public/fylo/profile-2.jpg';
+import profile3 from '/public/fylo/profile-3.jpg';
 
 export default function TestimonialsSection() {
   return (
@@ -15,7 +15,7 @@ export default function TestimonialsSection() {
             className="absolute -top-2 left-1 w-10 md:-top-16 md:w-20"
           />
 
-          <div className="dark:bg-darkBlue3 flex flex-col space-y-6 rounded-lg bg-gray-100 p-10 md:w-1/3">
+          <div className="flex flex-col space-y-6 rounded-lg bg-gray-100 p-10 md:w-1/3 dark:bg-darkBlue3">
             <p className="text-sm leading-5 md:text-lg">
               Fylo has improved our team productivity by an order of magnitude.
               Since making the switch our team has become a well-oiled
@@ -30,7 +30,7 @@ export default function TestimonialsSection() {
             </div>
           </div>
 
-          <div className="dark:bg-darkBlue3 flex flex-col space-y-6 rounded-lg bg-gray-100 p-10 md:w-1/3">
+          <div className="flex flex-col space-y-6 rounded-lg bg-gray-100 p-10 md:w-1/3 dark:bg-darkBlue3">
             <p className="text-sm leading-5 md:text-lg">
               Fylo has improved our team productivity by an order of magnitude.
               Since making the switch our team has become a well-oiled
@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
             </div>
           </div>
 
-          <div className="dark:bg-darkBlue3 flex flex-col space-y-6 rounded-lg bg-gray-100 p-10 md:w-1/3">
+          <div className="flex flex-col space-y-6 rounded-lg bg-gray-100 p-10 md:w-1/3 dark:bg-darkBlue3">
             <p className="text-sm leading-5 md:text-lg">
               Fylo has improved our team productivity by an order of magnitude.
               Since making the switch our team has become a well-oiled

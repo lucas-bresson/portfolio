@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import imageDevices from '../../../../public/clipboard/image-devices.png';
+import imageDevices from '/public/clipboard/image-devices.png';
 
 export default function AccessAnywhereSection() {
   return (

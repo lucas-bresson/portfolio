@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { useState } from 'react';
-import imagePanel1 from '../../../../public/bookmark/illustration-features-tab-1.svg';
-import imagePanel2 from '../../../../public/bookmark/illustration-features-tab-2.svg';
-import imagePanel3 from '../../../../public/bookmark/illustration-features-tab-3.svg';
+import imagePanel1 from '/public/bookmark/illustration-features-tab-1.svg';
+import imagePanel2 from '/public/bookmark/illustration-features-tab-2.svg';
+import imagePanel3 from '/public/bookmark/illustration-features-tab-3.svg';
 
 export default function FeaturesSection() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
@@ -12,7 +12,7 @@ export default function FeaturesSection() {
       <section id="features">
         <div className="container mx-auto mt-16 px-6">
           <h2 className="mb-6 text-center text-4xl font-semibold">Features</h2>
-          <p className="text-grayishBlue mx-auto max-w-md text-center">
+          <p className="mx-auto max-w-md text-center text-grayishBlue">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
             can access them on the go.
@@ -65,7 +65,7 @@ export default function FeaturesSection() {
                 <h3 className="mt-32 text-center text-3xl font-semibold md:mt-0 md:text-left">
                   Bookmark in one click
                 </h3>
-                <p className="text-grayishBlue text-center md:text-left">
+                <p className="text-center text-grayishBlue md:text-left">
                   Organize your bookmarks however you like. Our simple
                   drag-and-drop interface gives you complete control over how
                   you manage your favourite sites.
@@ -94,7 +94,7 @@ export default function FeaturesSection() {
                 <h3 className="mt-14 text-center text-3xl font-semibold md:mt-0 md:text-left">
                   Intelligent search
                 </h3>
-                <p className="text-grayishBlue text-center md:text-left">
+                <p className="text-center text-grayishBlue md:text-left">
                   Our powerful search feature will help you find saved sites in
                   no time at all. No need to trawl through all of your
                   bookmarks.
@@ -123,7 +123,7 @@ export default function FeaturesSection() {
                 <h3 className="mt-32 text-center text-3xl font-semibold md:mt-0 md:text-left">
                   Share your bookmarks
                 </h3>
-                <p className="text-grayishBlue text-center md:text-left">
+                <p className="text-center text-grayishBlue md:text-left">
                   Easily share your bookmarks and collections with others.
                   Create a shareable a link that you can send at the click of a
                   button.

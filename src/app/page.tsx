@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import bookmark from '../../public/home/bookmark.png';
-import clipboard from '../../public/home/clipboard.png';
-import fylo from '../../public/home/fylo.png';
-import loopstudios from '../../public/home/loopstudios.png';
-import shortly from '../../public/home/shortly.png';
-import sneakersEcommerce from '../../public/home/sneakers-ecommerce.png';
-import passwordGenerator from '../../public/home/password-generator.png';
-import memoryGame from '../../public/home/memory-game.png';
+import bookmark from '/public/home/bookmark.png';
+import clipboard from '/public/home/clipboard.png';
+import fylo from '/public/home/fylo.png';
+import loopstudios from '/public/home/loopstudios.png';
+import shortly from '/public/home/shortly.png';
+import sneakersEcommerce from '/public/home/sneakers-ecommerce.png';
+import passwordGenerator from '/public/home/password-generator.png';
+import memoryGame from '/public/home/memory-game.png';
 
 const PAGES = [
   { href: '/bookmark', image: bookmark },

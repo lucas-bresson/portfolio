@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import logo from '../../../../public/loopstudios/logo.svg';
-import iconFacebook from '../../../../public/loopstudios/icon-facebook.svg';
-import iconTwitter from '../../../../public/loopstudios/icon-twitter.svg';
-import iconPinterest from '../../../../public/loopstudios/icon-pinterest.svg';
-import iconInstagram from '../../../../public/loopstudios/icon-instagram.svg';
+import logo from '/public/loopstudios/logo.svg';
+import iconFacebook from '/public/loopstudios/icon-facebook.svg';
+import iconTwitter from '/public/loopstudios/icon-twitter.svg';
+import iconPinterest from '/public/loopstudios/icon-pinterest.svg';
+import iconInstagram from '/public/loopstudios/icon-instagram.svg';
 
 export default function Footer() {
   return (

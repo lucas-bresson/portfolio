@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import iconFacebook from '../../../../public/fylo/facebook.svg';
-import iconInstagram from '../../../../public/fylo/instagram.svg';
-import iconTwitter from '../../../../public/fylo/twitter.svg';
-import iconEmail from '../../../../public/fylo/icon-email.svg';
-import iconPhone from '../../../../public/fylo/icon-phone.svg';
+import iconFacebook from '/public/fylo/facebook.svg';
+import iconInstagram from '/public/fylo/instagram.svg';
+import iconTwitter from '/public/fylo/twitter.svg';
+import iconEmail from '/public/fylo/icon-email.svg';
+import iconPhone from '/public/fylo/icon-phone.svg';
 
 export default function Footer() {
   return (

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import logo from '../../../../public/clipboard/logo.svg';
+import logo from '/public/clipboard/logo.svg';
 
 export default function HeroSection() {
   return (

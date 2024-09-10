@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import logo from '../../../../public/shortly/logo.svg';
+import logo from '/public/shortly/logo.svg';
 import { useState } from 'react';
 
 export default function Header() {
@@ -33,13 +33,13 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="text-grayishViolet hidden items-center space-x-6 font-bold lg:flex">
+        <div className="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex">
           <a href="#" className="hover:text-veryDarkViolet">
             Login
           </a>
           <a
             href="#"
-            className="bg-cyan rounded-full px-8 py-3 font-bold text-white hover:opacity-70"
+            className="rounded-full bg-cyan px-8 py-3 font-bold text-white hover:opacity-70"
           >
             Sign Up
           </a>
@@ -60,7 +60,7 @@ export default function Header() {
       </div>
 
       <div
-        className={`bg-darkViolet z-100 absolute left-6 right-6 top-20 rounded-lg p-6 ${
+        className={`z-100 absolute left-6 right-6 top-20 rounded-lg bg-darkViolet p-6 ${
           hamburger ? 'visible flex' : 'hidden'
         }`}
       >
@@ -80,7 +80,7 @@ export default function Header() {
           >
             Login
           </a>
-          <a href="#" className="bg-cyan w-full rounded-full py-3 text-center">
+          <a href="#" className="w-full rounded-full bg-cyan py-3 text-center">
             Sign Up
           </a>
         </div>

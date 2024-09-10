@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import logoGoogle from '../../../../public/clipboard/logo-google.png';
-import logoIBM from '../../../../public/clipboard/logo-ibm.png';
-import logoMicrosoft from '../../../../public/clipboard/logo-microsoft.png';
-import logoHP from '../../../../public/clipboard/logo-hp.png';
-import logoVectorGraphics from '../../../../public/clipboard/logo-vector-graphics.png';
+import logoGoogle from '/public/clipboard/logo-google.png';
+import logoIBM from '/public/clipboard/logo-ibm.png';
+import logoMicrosoft from '/public/clipboard/logo-microsoft.png';
+import logoHP from '/public/clipboard/logo-hp.png';
+import logoVectorGraphics from '/public/clipboard/logo-vector-graphics.png';
 
 export default function ReferencesSection() {
   return (

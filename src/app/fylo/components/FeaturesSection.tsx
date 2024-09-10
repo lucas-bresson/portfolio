@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import iconCollaboration from '../../../../public/fylo/icon-collaboration.svg';
-import iconSecurity from '../../../../public/fylo/icon-security.svg';
-import iconAccessAnywhere from '../../../../public/fylo/icon-access-anywhere.svg';
-import iconAnyFile from '../../../../public/fylo/icon-any-file.svg';
+import iconCollaboration from '/public/fylo/icon-collaboration.svg';
+import iconSecurity from '/public/fylo/icon-security.svg';
+import iconAccessAnywhere from '/public/fylo/icon-access-anywhere.svg';
+import iconAnyFile from '/public/fylo/icon-any-file.svg';
 
 export default function Section() {
   return (
-    <section id="features" className="dark:bg-darkBlue1 bg-gray-50 pt-12">
+    <section id="features" className="bg-gray-50 pt-12 dark:bg-darkBlue1">
       <div className="container mx-auto px-6 pb-32">
         <div className="flex flex-col space-y-24 text-center md:flex-row md:space-y-0">
           <div className="flex flex-col items-center space-y-2 md:w-1/2">

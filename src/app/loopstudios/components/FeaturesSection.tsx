@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { josefinSans } from '@/app/ui/fonts';
-import interactiveDesktop from '../../../../public/loopstudios/desktop/image-interactive.jpg';
+import interactiveDesktop from '/public/loopstudios/desktop/image-interactive.jpg';
 
 export default function FeaturesSection() {
   return (
