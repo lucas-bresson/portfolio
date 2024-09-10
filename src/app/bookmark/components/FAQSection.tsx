@@ -9,10 +9,10 @@ const Tab = ({
 }) => (
   <div className="group border-b py-1 outline-none" tabIndex={tabIndex}>
     <div className="duratin-500 ease group flex cursor-pointer items-center justify-between py-3 text-gray-500 transition">
-      <div className="ease transition duration-500 group-hover:text-red-500">
+      <div className="ease group-hover:text-red-500 transition duration-500">
         {title}
       </div>
-      <div className="ease transition duration-500 group-focus:-rotate-180 group-focus:text-red-500">
+      <div className="ease group-focus:text-red-500 transition duration-500 group-focus:-rotate-180">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
           <path
             fill="none"

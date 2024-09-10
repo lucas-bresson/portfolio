@@ -2,9 +2,9 @@ export default function EarlyAccessSection() {
   return (
     <section
       id="early-access"
-      className="dark:bg-darkBlue2 relative px-6 md:px-0"
+      className="relative px-6 md:px-0 dark:bg-darkBlue2"
     >
-      <div className="dark:bg-darkBlue1 relative -top-40 mx-auto max-w-4xl space-y-6 rounded-lg bg-gray-200 p-10 px-6 text-center md:px-16">
+      <div className="relative -top-40 mx-auto max-w-4xl space-y-6 rounded-lg bg-gray-200 p-10 px-6 text-center md:px-16 dark:bg-darkBlue1">
         <h5 className="text-2xl font-bold">Get early access today</h5>
         <p className="text-sm">
           It only takes a minute to sign up and our free starter tier is
@@ -20,7 +20,7 @@ export default function EarlyAccessSection() {
             />
           </div>
 
-          <button className="bg-accentCyan w-full rounded-full p-3 px-6 hover:scale-95 md:w-56">
+          <button className="w-full rounded-full bg-accentCyan p-3 px-6 hover:scale-95 md:w-56">
             Get Started For Free
           </button>
         </div>

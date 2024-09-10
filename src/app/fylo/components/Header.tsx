@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header className="container mx-auto h-40 px-6 text-center md:h-20">
-      <div className="bg-logo-light-mode dark:bg-logo-dark-mode left-10 top-10 mx-auto h-20 w-48 bg-no-repeat md:absolute md:mx-0" />
+      <div className="left-10 top-10 mx-auto h-20 w-48 bg-logo-light-mode bg-no-repeat md:absolute md:mx-0 dark:bg-logo-dark-mode" />
       <div className="right-10 top-12 flex items-center justify-center space-x-4 md:absolute md:space-x-10">
         <a href="#features" className="hover:text-accentCyan">
           Features
