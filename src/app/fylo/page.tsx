@@ -7,12 +7,14 @@ import ProductiveSection from './components/ProductiveSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import EarlyAccessSection from './components/EarlyAccessSection';
 import Footer from './components/Footer';
+import FeaturesSection from './components/FeaturesSection';
 
 export default function Page() {
   return (
     <div className={`dark:bg-darkBlue dark:text-white ${openSans.className}`}>
       <Header />
       <HeroSection />
+      <FeaturesSection />
       <ProductiveSection />
       <TestimonialsSection />
       <EarlyAccessSection />
