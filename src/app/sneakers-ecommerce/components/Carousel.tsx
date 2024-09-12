@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import iconPrevious from '/public/sneakers-ecommerce/icon-previous.svg';
 import iconNext from '/public/sneakers-ecommerce/icon-next.svg';

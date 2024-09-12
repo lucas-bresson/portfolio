@@ -8,6 +8,7 @@ import shortly from '/public/home/shortly.png';
 import sneakersEcommerce from '/public/home/sneakers-ecommerce.png';
 import passwordGenerator from '/public/home/password-generator.png';
 import memoryGame from '/public/home/memory-game.png';
+import pomodoro from '/public/home/pomodoro.png';
 
 const PAGES = [
   { href: '/bookmark', image: bookmark },
@@ -21,6 +22,7 @@ const PAGES = [
 const APPS = [
   { href: '/password-generator', image: passwordGenerator },
   { href: '/memory-game', image: memoryGame },
+  { href: '/pomodoro', image: pomodoro },
 ];
 
 export default function Page() {

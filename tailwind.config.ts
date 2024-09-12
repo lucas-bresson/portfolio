@@ -47,6 +47,13 @@ const config: Config = {
         red: 'hsl(0, 87%, 67%)',
         grayishViolet: 'hsl(257, 7%, 63%)',
         veryDarkViolet: 'hsl(260, 8%, 14%) ',
+        // pomodoro
+        darkBlue6: '	hsl(234, 33%, 24%)',
+        darkBlue4: 'hsl(232.9,36.2%,18.4%)',
+        darkBlue5: 'hsl(232, 41%, 14%)',
+        pastelBlue: 'hsl(225.4,90.2%,92%)',
+        grayishBlue3: 'hsl(232, 13%, 43%)',
+        pastelRed: 'hsl(0, 91%, 71%)',
       },
       fontSize: {
         xxxs: '0.5rem',
@@ -55,6 +62,7 @@ const config: Config = {
       letterSpacing: {
         doubleWide: '.2em',
         tripleWide: '.3em',
+        quadrupleWide: '.4em',
       },
       content: {
         check: 'url("/images/icon-check.svg")',
@@ -68,7 +76,7 @@ const config: Config = {
       animation: {
         slideIn: 'slideIn 0.3s ease-out forwards',
       },
-      backgroundImage: (theme) => ({
+      backgroundImage: () => ({
         // bookmark
         dots: "url('/../../../../bookmark/bg-dots.svg')",
         // fylo
