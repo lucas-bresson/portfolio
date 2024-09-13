@@ -33,10 +33,6 @@ export default function Page() {
     longBreakDuration: appTimes.longBreak * 60,
   });
 
-  useEffect(() => {
-    reset();
-  }, [appTimes, reset]);
-
   const setSettings = ({
     pomodoro,
     shortBreak,
@@ -54,6 +50,11 @@ export default function Page() {
     setAppFont(font);
     setAppColor(color);
   };
+
+  useEffect(() => {
+    reset();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [appTimes]);
 
   const accentColor = getAccentColor(appColor);
 
