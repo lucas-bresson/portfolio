@@ -58,7 +58,7 @@ const FontInput = ({
 }) => (
   <button
     onClick={onClick}
-    className={`flex h-10 w-10 items-center justify-center rounded-full ${getFontClassname(font)} ${selected ? 'bg-black text-white' : 'bg-indigo-50 text-gray-500'}`}
+    className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-300 ${getFontClassname(font)} ${selected ? 'bg-black text-white' : 'bg-indigo-50 text-gray-500'}`}
   >
     Aa
   </button>
@@ -75,7 +75,7 @@ const ColorInput = ({
 }) => (
   <button
     onClick={onClick}
-    className={`flex h-10 w-10 items-center justify-center rounded-full bg-${getAccentColor(color)}`}
+    className={`flex h-10 w-10 items-center justify-center rounded-full ${getAccentColor(color)}`}
   >
     {selected && <Image src={iconCheck} alt="icon-check" className="w-4" />}
   </button>
@@ -190,7 +190,7 @@ export default function SettingsModal({
           <div className="flex translate-y-7 justify-center">
             <button
               onClick={applySettings}
-              className={`w-32 rounded-full px-8 py-4 text-white bg-${accentColor}`}
+              className={`w-32 rounded-full px-8 py-4 text-white ${accentColor}`}
             >
               Apply
             </button>
