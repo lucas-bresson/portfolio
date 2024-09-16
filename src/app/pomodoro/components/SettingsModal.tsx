@@ -21,7 +21,6 @@ const TimeInput = ({
       <input
         className="w-full bg-indigo-50"
         min={0}
-        defaultValue={value}
         value={value}
         onChange={(e) => setValue(Number(e.target.value))}
       />

@@ -55,15 +55,15 @@ export default function Page() {
       </div>
       <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
         {PAGES.map(({ href, image }) => (
-          <Link key={href} href={href} className="">
+          <Link key={href} href={href}>
             <Image src={image} alt={href} />
           </Link>
         ))}
       </div>
       <div className="mx-auto mt-32 grid max-w-6xl gap-8 md:grid-cols-3">
         {APPS.map(({ href, image }) => (
-          <Link key={href} href={href} className="">
-            <Image src={image} alt={href} className="shadow-xl" />
+          <Link key={href} href={href}>
+            <Image src={image} alt={href} />
           </Link>
         ))}
       </div>
