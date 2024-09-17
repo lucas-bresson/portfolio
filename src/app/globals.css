@@ -89,4 +89,24 @@
     filter: invert(79%) sepia(61%) saturate(464%) hue-rotate(130deg)
       brightness(89%) contrast(85%);
   }
+
+  /* Chrome, Safari, Edge, Opera */
+  .pomodoro {
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type='number'] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  .progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
 }

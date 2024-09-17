@@ -16,6 +16,9 @@ export default function usePomodoroCounter({
   const [activeMode, setActiveMode] = useState<Mode>('pomodoro');
   const intervalRef = useRef<number | null>(null);
 
+  const [currentModeDuration, setCurrentModeDuration] =
+    useState(pomodoroDuration);
+
   const switchMode = (mode: Mode) => {
     setActiveMode(mode);
     setIsRunning(false);
@@ -26,10 +29,13 @@ export default function usePomodoroCounter({
 
     if (mode === 'pomodoro') {
       setTimeLeft(pomodoroDuration);
+      setCurrentModeDuration(pomodoroDuration);
     } else if (mode === 'short') {
       setTimeLeft(shortBreakDuration);
+      setCurrentModeDuration(shortBreakDuration);
     } else if (mode === 'long') {
       setTimeLeft(longBreakDuration);
+      setCurrentModeDuration(longBreakDuration);
     }
   };
 
@@ -64,6 +70,8 @@ export default function usePomodoroCounter({
     switchMode(activeMode);
   };
 
+  const timeLeftPercentage = 100 * (timeLeft / currentModeDuration);
+
   useEffect(() => {
     return () => {
       if (intervalRef.current !== null) {
@@ -76,6 +84,7 @@ export default function usePomodoroCounter({
     timeLeft,
     isRunning,
     activeMode,
+    timeLeftPercentage,
     start,
     pause,
     reset,

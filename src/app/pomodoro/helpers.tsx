@@ -17,14 +17,16 @@ export const getFontClassname = (font: number) => {
   }
 };
 
-export const getAccentColor = (color: number) => {
+export const getAccentColor = (
+  color: number
+): { background: string; circle: string } => {
   switch (color) {
     case 1:
     default:
-      return 'bg-pastelRed';
+      return { background: 'bg-pastelRed', circle: 'hsl(0, 91%, 71%)' };
     case 2:
-      return 'bg-cyan';
+      return { background: 'bg-cyan', circle: 'hsl(180, 66%, 49%)' };
     case 3:
-      return 'bg-violet-500';
+      return { background: 'bg-violet-500', circle: 'hsl(258.3,89.5%,66.3%)' };
   }
 };

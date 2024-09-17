@@ -48,7 +48,7 @@ const config: Config = {
         grayishViolet: 'hsl(257, 7%, 63%)',
         veryDarkViolet: 'hsl(260, 8%, 14%) ',
         // pomodoro
-        darkBlue6: '	hsl(234, 33%, 24%)',
+        darkBlue6: '	hsl(235, 31%, 30%)',
         darkBlue4: 'hsl(232.9,36.2%,18.4%)',
         darkBlue5: 'hsl(232, 41%, 14%)',
         pastelBlue: 'hsl(225.4,90.2%,92%)',

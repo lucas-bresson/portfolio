@@ -10,33 +10,33 @@ const TimeInput = ({
   label,
   value,
   setValue,
+  max,
 }: {
   label: string;
   value: number;
   setValue: Dispatch<SetStateAction<number>>;
+  max: number;
 }) => (
-  <div className="space-y-2">
-    <div className="text-xs text-gray-400">{label}</div>
+  <div className="pomodoro space-y-2">
+    <div className="text-sm text-gray-400">{label}</div>
     <div className="flex rounded-lg bg-indigo-50 px-4 py-3">
       <input
-        className="w-full bg-indigo-50"
+        type="number"
         min={0}
+        max={max}
         value={value}
         onChange={(e) => setValue(Number(e.target.value))}
+        className="w-full bg-indigo-50"
       />
       <div className="flex flex-col items-center justify-center space-y-1.5">
         <Image
-          onClick={() => setValue((prevState) => prevState + 1)}
+          onClick={() => value < max && setValue((prevState) => prevState + 1)}
           className="w-4 cursor-pointer"
           src={iconArrowUp}
           alt="arrow-up"
         />
         <Image
-          onClick={
-            value === 0
-              ? () => {}
-              : () => setValue((prevState) => prevState - 1)
-          }
+          onClick={() => value >= 0 && setValue((prevState) => prevState - 1)}
           className="w-4 cursor-pointer"
           src={iconArrowDown}
           alt="arrow-down"
@@ -74,7 +74,7 @@ const ColorInput = ({
 }) => (
   <button
     onClick={onClick}
-    className={`flex h-10 w-10 items-center justify-center rounded-full ${getAccentColor(color)}`}
+    className={`flex h-10 w-10 items-center justify-center rounded-full ${getAccentColor(color).background}`}
   >
     {selected && <Image src={iconCheck} alt="icon-check" className="w-4" />}
   </button>
@@ -130,17 +130,20 @@ export default function SettingsModal({
             <TimeInput
               label="pomodoro"
               value={pomodoroTime}
-              setValue={(x) => setPodomoroTime(x)}
+              max={90}
+              setValue={setPodomoroTime}
             />
             <TimeInput
               label="short break"
               value={shortBreakTime}
-              setValue={(x) => setShortBreakTime(x)}
+              max={10}
+              setValue={setShortBreakTime}
             />
             <TimeInput
               label="long break"
               value={longBreakTime}
-              setValue={(x) => setLongBreakTime(x)}
+              max={30}
+              setValue={setLongBreakTime}
             />
           </div>
 
