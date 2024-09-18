@@ -9,15 +9,12 @@ import usePomodoroCounter from './hooks/usePomodoroCounter';
 import ProgressCircle from './components/ProgressCircle';
 
 export default function Page() {
-  const [settingsOpen, setSettingsOpen] = useState(false);
-  const [appTimes, setAppTimes] = useState({
-    pomodoro: 25,
-    shortBreak: 5,
-    longBreak: 15,
-  });
-  const [appFont, setAppFont] = useState(1);
-  const [appColor, setAppColor] = useState(1);
+  const [timers, setTimers] = useState({ pomodoro: 25, short: 5, long: 15 });
+  const [font, setFont] = useState(1);
+  const [color, setColor] = useState(1);
   const [progress, setProgress] = useState(100);
+  const [pomodoroCounter, setPomodoroCounter] = useState(0);
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   const {
     timeLeft,
@@ -31,43 +28,66 @@ export default function Page() {
     switchToShortBreak,
     switchToLongBreak,
   } = usePomodoroCounter({
-    pomodoroDuration: appTimes.pomodoro * 60,
-    shortBreakDuration: appTimes.shortBreak * 60,
-    longBreakDuration: appTimes.longBreak * 60,
+    pomodoroDuration: timers.pomodoro * 60,
+    shortBreakDuration: timers.short * 60,
+    longBreakDuration: timers.long * 60,
   });
-
-  const setSettings = ({
-    pomodoro,
-    shortBreak,
-    longBreak,
-    font,
-    color,
-  }: {
-    pomodoro: number;
-    shortBreak: number;
-    longBreak: number;
-    font: number;
-    color: number;
-  }) => {
-    setAppTimes({ pomodoro, shortBreak, longBreak });
-    setAppFont(font);
-    setAppColor(color);
-  };
 
   useEffect(() => {
     reset();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [appTimes]);
+  }, [timers]);
 
   useEffect(() => {
     setProgress(timeLeftPercentage);
+
+    if (timeLeftPercentage === 0) {
+      const bell = new Audio('/pomodoro/bell.wav');
+      bell.play();
+
+      switch (activeMode) {
+        case 'pomodoro':
+        default:
+          if (pomodoroCounter < 4) {
+            setPomodoroCounter((prevState) => prevState + 1);
+            return switchToShortBreak();
+          } else {
+            setPomodoroCounter(0);
+            return switchToLongBreak();
+          }
+        case 'short':
+          return switchToPomodoro();
+        case 'long':
+          return switchToPomodoro();
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeftPercentage]);
 
-  const accentColor = getAccentColor(appColor);
+  const setSettings = ({
+    pomodoro,
+    short,
+    long,
+    font,
+    color,
+  }: {
+    pomodoro: number;
+    short: number;
+    long: number;
+    font: number;
+    color: number;
+  }) => {
+    setTimers({ pomodoro, short, long });
+    setFont(font);
+    setColor(color);
+  };
+
+  const accentColor = getAccentColor(color);
+  const fontClassname = getFontClassname(font);
 
   return (
     <div
-      className={`flex h-screen w-screen flex-col items-center bg-darkBlue4 p-10 sm:p-24 ${getFontClassname(appFont)}`}
+      className={`flex h-screen w-screen flex-col items-center bg-darkBlue4 p-10 sm:p-24 ${fontClassname}`}
     >
       <h1 className="text-center text-3xl font-bold text-pastelBlue">
         pomodoro
@@ -129,12 +149,15 @@ export default function Page() {
         className="h-12 w-12 cursor-pointer hover:opacity-80"
         onClick={() => setSettingsOpen(true)}
       />
-      <SettingsModal
-        visible={settingsOpen}
-        accentColor={accentColor.background}
-        setSettings={setSettings}
-        closeModal={() => setSettingsOpen(false)}
-      />
+      {settingsOpen && (
+        <SettingsModal
+          appTimers={timers}
+          appFont={font}
+          appColor={color}
+          setSettings={setSettings}
+          closeModal={() => setSettingsOpen(false)}
+        />
+      )}
     </div>
   );
 }

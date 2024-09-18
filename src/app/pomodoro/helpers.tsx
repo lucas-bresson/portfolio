@@ -1,4 +1,4 @@
-import { josefinSans, jetBrainsFont } from '@/app/ui/fonts';
+import { alata, jetBrainsFont, kumbhSansFont } from '@/app/ui/fonts';
 
 export const formatTime = (time: number): string => {
   const minutes = Math.floor(time / 60);
@@ -9,11 +9,11 @@ export const formatTime = (time: number): string => {
 export const getFontClassname = (font: number) => {
   switch (font) {
     case 1:
-      return '';
+      return kumbhSansFont.className;
     case 2:
       return jetBrainsFont.className;
     case 3:
-      return josefinSans.className;
+      return alata.className;
   }
 };
 

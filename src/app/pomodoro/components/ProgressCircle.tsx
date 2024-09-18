@@ -26,10 +26,9 @@ export default function ProgressCircle({
       <circle
         stroke={strokeColor}
         fill="transparent"
-        strokeWidth={strokeWidth}
         strokeDasharray={circumference + ' ' + circumference}
         style={{ strokeDashoffset }}
-        stroke-width={strokeWidth}
+        strokeWidth={strokeWidth}
         r={normalizedRadius}
         cx={radius}
         cy={radius}

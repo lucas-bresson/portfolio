@@ -17,16 +17,16 @@ const TimeInput = ({
   setValue: Dispatch<SetStateAction<number>>;
   max: number;
 }) => (
-  <div className="pomodoro space-y-2">
+  <div className="pomodoro w-full space-y-2">
     <div className="text-sm text-gray-400">{label}</div>
-    <div className="flex rounded-lg bg-indigo-50 px-4 py-3">
+    <div className="flex justify-between rounded-lg bg-indigo-50 px-4 py-3">
       <input
         type="number"
         min={0}
         max={max}
         value={value}
         onChange={(e) => setValue(Number(e.target.value))}
-        className="w-full bg-indigo-50"
+        className="bg-indigo-50"
       />
       <div className="flex flex-col items-center justify-center space-y-1.5">
         <Image
@@ -36,7 +36,7 @@ const TimeInput = ({
           alt="arrow-up"
         />
         <Image
-          onClick={() => value >= 0 && setValue((prevState) => prevState - 1)}
+          onClick={() => value > 1 && setValue((prevState) => prevState - 1)}
           className="w-4 cursor-pointer"
           src={iconArrowDown}
           alt="arrow-down"
@@ -81,38 +81,34 @@ const ColorInput = ({
 );
 
 export default function SettingsModal({
-  visible,
-  accentColor,
+  appTimers,
+  appFont,
+  appColor,
   setSettings,
   closeModal,
 }: {
-  visible: boolean;
-  accentColor: string;
+  appTimers: { pomodoro: number; short: number; long: number };
+  appFont: number;
+  appColor: number;
   setSettings: any;
   closeModal: () => void;
 }) {
-  const [pomodoroTime, setPodomoroTime] = useState(25);
-  const [shortBreakTime, setShortBreakTime] = useState(5);
-  const [longBreakTime, setLongBreakTime] = useState(15);
-  const [font, setFont] = useState(1);
-  const [color, setColor] = useState(1);
+  const [pomodoro, setPomodoro] = useState(appTimers.pomodoro);
+  const [short, setShort] = useState(appTimers.short);
+  const [long, setLong] = useState(appTimers.long);
+  const [font, setFont] = useState(appFont);
+  const [color, setColor] = useState(appColor);
 
   const applySettings = () => {
-    setSettings({
-      pomodoro: pomodoroTime,
-      shortBreak: shortBreakTime,
-      longBreak: longBreakTime,
-      font,
-      color,
-    });
+    setSettings({ pomodoro, short, long, font, color });
     closeModal();
   };
 
-  if (!visible) return;
-
   return (
     <div className="absolute top-0 flex h-full w-full items-center justify-center bg-black bg-opacity-40">
-      <div className="mx-auto w-[90%] rounded-xl bg-white font-bold text-slate-900 sm:max-w-lg">
+      <div
+        className={`mx-auto w-[90%] rounded-xl bg-white font-bold text-slate-900 sm:max-w-lg ${getFontClassname(font)}`}
+      >
         <div className="flex items-center justify-between border-b border-slate-200 px-10 py-8">
           <div className="text-3xl">Settings</div>
           <Image
@@ -129,21 +125,21 @@ export default function SettingsModal({
           <div className="flex items-center justify-between space-x-4 border-b border-slate-200 pb-6">
             <TimeInput
               label="pomodoro"
-              value={pomodoroTime}
+              value={pomodoro}
               max={90}
-              setValue={setPodomoroTime}
+              setValue={setPomodoro}
             />
             <TimeInput
               label="short break"
-              value={shortBreakTime}
+              value={short}
               max={10}
-              setValue={setShortBreakTime}
+              setValue={setShort}
             />
             <TimeInput
               label="long break"
-              value={longBreakTime}
+              value={long}
               max={30}
-              setValue={setLongBreakTime}
+              setValue={setLong}
             />
           </div>
 
@@ -192,7 +188,7 @@ export default function SettingsModal({
           <div className="flex translate-y-7 justify-center">
             <button
               onClick={applySettings}
-              className={`w-32 rounded-full px-8 py-4 text-white ${accentColor}`}
+              className={`w-32 rounded-full px-8 py-4 text-white ${getAccentColor(color).background || appColor}`}
             >
               Apply
             </button>
