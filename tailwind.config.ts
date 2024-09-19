@@ -54,6 +54,17 @@ const config: Config = {
         pastelBlue: 'hsl(225.4,90.2%,92%)',
         grayishBlue3: 'hsl(232, 13%, 43%)',
         pastelRed: 'hsl(0, 91%, 71%)',
+        // multi-step form
+        marineBlue: 'hsl(213, 96%, 18%)',
+        purplishBlue: 'hsl(243, 100%, 62%)',
+        pastelBlue2: 'hsl(228, 100%, 84%)',
+        lightBlue2: 'hsl(206, 94%, 87%)',
+        strawberryRed: 'hsl(354, 84%, 57%)',
+        coolGray: 'hsl(231, 11%, 63%)',
+        lightGray: 'hsl(229, 24%, 87%)',
+        magnolia: 'hsl(217, 100%, 97%)',
+        alabaster: 'hsl(231, 100%, 99%)',
+        white: 'hsl(0, 0%, 100%)',
       },
       fontSize: {
         xxxs: '0.5rem',
@@ -84,6 +95,9 @@ const config: Config = {
         'logo-light-mode': "url('/../../../../fylo/logo-light-mode.svg')",
         'curvy-dark-mode': "url('/../../../../fylo/bg-curvy-dark-mode.svg')",
         'curvy-light-mode': "url('/../../../../fylo/bg-curvy-light-mode.svg')",
+        // multi-step-form
+        'sidebar-mobile': "url('/multi-step-form/bg-sidebar-mobile.svg')",
+        'sidebar-desktop': "url('/multi-step-form/bg-sidebar-desktop.svg')",
       }),
     },
   },
