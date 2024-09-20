@@ -45,11 +45,11 @@ export default function Page() {
           <div className="mx-2 mt-2 border-b-2 border-black opacity-0 duration-500 group-hover:opacity-100"></div>
         </div>
         <div className="group">
-          <a href="#">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/lucas-bresson/">LinkedIn</a>
           <div className="mx-2 mt-2 border-b-2 border-black opacity-0 duration-500 group-hover:opacity-100"></div>
         </div>
         <div className="group">
-          <a href="#">Github</a>
+          <a href="https://github.com/lucas-bresson">Github</a>
           <div className="mx-2 mt-2 border-b-2 border-black opacity-0 duration-500 group-hover:opacity-100"></div>
         </div>
       </div>
