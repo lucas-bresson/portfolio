@@ -23,6 +23,7 @@ const APPS = [
   { href: '/password-generator', image: passwordGenerator },
   { href: '/memory-game', image: memoryGame },
   { href: '/pomodoro', image: pomodoro },
+  { href: '/multi-step-form', image: pomodoro },
 ];
 
 export default function Page() {
