@@ -10,12 +10,14 @@ export default function StepContainer({
   children: ReactNode;
 }) {
   return (
-    <>
-      <div className="text-3xl font-bold text-marineBlue">{title}</div>
-      <div className="mt-4 text-lg tracking-tight text-coolGray">
+    <div>
+      <div className="text-4xl font-bold text-marineBlue md:text-3xl">
+        {title}
+      </div>
+      <div className="mt-2 text-xl tracking-tight text-coolGray md:text-base">
         {headline}
       </div>
-      <div className="min-h-72 md:mb-32">{children}</div>
-    </>
+      <div className="my-6 min-h-72 md:my-12 md:mb-12">{children}</div>
+    </div>
   );
 }

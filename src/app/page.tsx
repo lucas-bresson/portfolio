@@ -9,6 +9,7 @@ import sneakersEcommerce from '/public/home/sneakers-ecommerce.png';
 import passwordGenerator from '/public/home/password-generator.png';
 import memoryGame from '/public/home/memory-game.png';
 import pomodoro from '/public/home/pomodoro.png';
+import multiStepForm from '/public/home/multi-step-form.png';
 
 const PAGES = [
   { href: '/bookmark', image: bookmark },
@@ -23,7 +24,7 @@ const APPS = [
   { href: '/password-generator', image: passwordGenerator },
   { href: '/memory-game', image: memoryGame },
   { href: '/pomodoro', image: pomodoro },
-  { href: '/multi-step-form', image: pomodoro },
+  { href: '/multi-step-form', image: multiStepForm },
 ];
 
 export default function Page() {
