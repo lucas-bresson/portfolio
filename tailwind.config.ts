@@ -65,6 +65,12 @@ const config: Config = {
         magnolia: 'hsl(217, 100%, 97%)',
         alabaster: 'hsl(231, 100%, 99%)',
         white: 'hsl(0, 0%, 100%)',
+        // home
+        color1: '#212a31',
+        color2: '#3c4754',
+        color3: '#124e66',
+        color4: '#748d92',
+        color5: '#d3d9d4',
       },
       fontSize: {
         xxxs: '0.5rem',

@@ -1,73 +1,156 @@
+'use client';
+
 import Link from 'next/link';
-import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import bookmark from '/public/home/bookmark.png';
 import clipboard from '/public/home/clipboard.png';
-import fylo from '/public/home/fylo.png';
-import loopstudios from '/public/home/loopstudios.png';
 import shortly from '/public/home/shortly.png';
-import sneakersEcommerce from '/public/home/sneakers-ecommerce.png';
+import loopstudios from '/public/home/loopstudios.png';
+import fylo from '/public/home/fylo.png';
 import passwordGenerator from '/public/home/password-generator.png';
 import memoryGame from '/public/home/memory-game.png';
 import pomodoro from '/public/home/pomodoro.png';
 import multiStepForm from '/public/home/multi-step-form.png';
+import bookmarkThumbnail from '/public/home/bookmark-thumbnail.png';
+import clipboardThumbnail from '/public/home/clipboard-thumbnail.png';
+import shortlyThumbnail from '/public/home/shortly-thumbnail.png';
+import loopstudiosThumbnail from '/public/home/loopstudios-thumbnail.png';
+import fyloThumbnail from '/public/home/fylo-thumbnail.png';
+import passwordGeneratorThumbnail from '/public/home/password-generator.png';
+import memoryGameThumbnail from '/public/home/memory-game.png';
+import pomodoroThumbnail from '/public/home/pomodoro-thumbnail.png';
+import multiStepFormThumbnail from '/public/home/multi-step-form.png';
+import Carousel from './ui/components/Carousel';
 
-const PAGES = [
-  { href: '/bookmark', image: bookmark },
-  { href: '/clipboard', image: clipboard },
-  { href: '/shortly', image: shortly },
-  { href: '/loopstudios', image: loopstudios },
-  { href: '/fylo', image: fylo },
-  { href: '/sneakers-ecommerce', image: sneakersEcommerce },
+const LANDINGS_PAGES = [
+  {
+    href: '/bookmark',
+    image: bookmark,
+    thumbnail: bookmarkThumbnail,
+    alt: 'product1',
+  },
+  {
+    href: '/clipboard',
+    image: clipboard,
+    thumbnail: clipboardThumbnail,
+    alt: 'clipboard',
+  },
+  {
+    href: '/shortly',
+    image: shortly,
+    thumbnail: shortlyThumbnail,
+    alt: 'shortly',
+  },
+  {
+    href: '/loopstudios',
+    image: loopstudios,
+    thumbnail: loopstudiosThumbnail,
+    alt: 'loopstudios',
+  },
+  {
+    href: '/fylo',
+    image: fylo,
+    thumbnail: fyloThumbnail,
+    alt: 'fylo',
+  },
 ];
 
-const APPS = [
-  { href: '/password-generator', image: passwordGenerator },
-  { href: '/memory-game', image: memoryGame },
-  { href: '/pomodoro', image: pomodoro },
-  { href: '/multi-step-form', image: multiStepForm },
+const APPLICATIONS = [
+  {
+    href: '/multi-step-form',
+    image: multiStepForm,
+    thumbnail: multiStepFormThumbnail,
+    alt: 'multi-step-form',
+  },
+  {
+    href: '/memory-game',
+    image: memoryGame,
+    thumbnail: memoryGameThumbnail,
+    alt: 'memory-game',
+  },
+  {
+    href: '/pomodoro',
+    image: pomodoro,
+    thumbnail: pomodoroThumbnail,
+    alt: 'pomodoro',
+  },
+  {
+    href: '/password-generator',
+    image: passwordGenerator,
+    thumbnail: passwordGeneratorThumbnail,
+    alt: 'password-generator',
+  },
 ];
 
 export default function Page() {
+  const [switchOn, setSwitchOn] = useState(false);
+  const [carousel, setCarousel] = useState(false);
+
+  useEffect(() => setCarousel(true), []);
+
   return (
-    <div className="bg-slate-50 px-8 py-16">
-      <div className="text-center">
-        <h1 className="my-12 text-center text-6xl">
-          Next.js | TypeScript | Tailwind
-        </h1>
-        <p className="mx-12 text-2xl">
-          Portfolio developed by
-          <span className="mx-2 rounded-sm bg-gray-100 text-xl text-black">
-            Lucas Bresson
+    <div className={`h-screen bg-gradient-to-b from-color1 to-color2`}>
+      <div className="flex flex-col">
+        <div className="right-12 top-12 z-10 mt-8 space-x-6 text-center text-sm font-semibold text-color5 sm:text-lg xl:absolute xl:mt-0">
+          <Link className="hover:text-color4" href="#">
+            CV
+          </Link>
+          <Link
+            className="hover:text-color4"
+            target="_blank"
+            href="https://www.linkedin.com/in/lucas-bresson/"
+          >
+            LinkedIn
+          </Link>
+          <Link
+            className="hover:text-color4"
+            target="_blank"
+            href="https://github.com/lucas-bresson"
+          >
+            Github
+          </Link>
+        </div>
+        <h1 className="absolute left-12 top-12 z-10 mx-auto hidden max-w-lg text-xl text-color5 2xl:block">
+          Hi, I am a french software engineer. <br />I have built following
+          landing pages & applications using
+          <span className="ms-2 rounded bg-color3 px-2.5 py-0.5 text-lg font-bold text-color5">
+            Next.js
           </span>
-        </p>
-      </div>
-      <div className="flex flex-col items-center justify-center space-y-3 md:mb-24 md:flex-row md:justify-end md:space-x-8 md:space-y-0">
-        <div className="group">
-          <a href="#">CV</a>
-          <div className="mx-2 mt-2 border-b-2 border-black opacity-0 duration-500 group-hover:opacity-100"></div>
+          ,
+          <span className="ms-2 rounded bg-color3 px-2.5 py-0.5 text-lg font-bold text-color5">
+            TypeScript
+          </span>
+          ,
+          <span className="ms-2 rounded bg-color3 px-2.5 py-0.5 text-lg font-bold text-color5">
+            Tailwind
+          </span>
+        </h1>
+        <label>
+          <div className="absolute my-8 flex w-full items-center justify-center space-x-4 sm:my-12">
+            <input
+              type="checkbox"
+              value=""
+              className="peer sr-only"
+              onClick={() => setSwitchOn((x) => !x)}
+            />
+            <div
+              className={`text-sm font-semibold uppercase tracking-wider sm:text-lg ${switchOn ? 'text-color4' : 'text-color5'}`}
+            >
+              Landing pages
+            </div>
+            <div className="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-color3 peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-blue-800"></div>
+            <div
+              className={`text-sm font-semibold uppercase tracking-wider sm:text-lg ${switchOn ? 'text-color5' : 'text-color4'}`}
+            >
+              Applications
+            </div>
+          </div>
+        </label>
+        <div
+          className={`mx-auto flex h-screen max-w-lg flex-col justify-center space-y-12 transition-opacity duration-1000 ease-in-out sm:pt-16 ${carousel ? 'opacity-100' : 'opacity-0'}`}
+        >
+          <Carousel slides={switchOn ? APPLICATIONS : LANDINGS_PAGES} />
         </div>
-        <div className="group">
-          <a href="https://www.linkedin.com/in/lucas-bresson/">LinkedIn</a>
-          <div className="mx-2 mt-2 border-b-2 border-black opacity-0 duration-500 group-hover:opacity-100"></div>
-        </div>
-        <div className="group">
-          <a href="https://github.com/lucas-bresson">Github</a>
-          <div className="mx-2 mt-2 border-b-2 border-black opacity-0 duration-500 group-hover:opacity-100"></div>
-        </div>
-      </div>
-      <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
-        {PAGES.map(({ href, image }) => (
-          <Link key={href} href={href}>
-            <Image src={image} alt={href} />
-          </Link>
-        ))}
-      </div>
-      <div className="mx-auto mt-32 grid max-w-6xl gap-8 md:grid-cols-3">
-        {APPS.map(({ href, image }) => (
-          <Link key={href} href={href}>
-            <Image src={image} alt={href} />
-          </Link>
-        ))}
       </div>
     </div>
   );
