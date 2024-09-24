@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
 import iconPrevious from '/public/sneakers-ecommerce/icon-previous.svg';
@@ -16,6 +16,8 @@ const Carousel = ({
 }) => {
   const [curr, setCurr] = useState(0);
   const router = useRouter();
+
+  useEffect(() => setCurr(0), [slides]);
 
   const prev = () =>
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
