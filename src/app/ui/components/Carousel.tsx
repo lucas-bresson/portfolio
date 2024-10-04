@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
 import iconPrevious from '/public/sneakers-ecommerce/icon-previous.svg';
@@ -16,8 +16,6 @@ const Carousel = ({
 }) => {
   const [curr, setCurr] = useState(0);
   const router = useRouter();
-
-  useEffect(() => setCurr(0), [slides]);
 
   const prev = () =>
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
@@ -58,11 +56,11 @@ const Carousel = ({
         </button>
       </div>
 
-      <div className="mt-2 hidden flex-1 md:flex">
+      <div className="mt-2 flex flex-1">
         {slides.map((slide, index) => (
           <div
             key={slide.alt}
-            className={`m-2 flex w-[25%] cursor-pointer rounded-lg border-2 first-of-type:ml-0 last-of-type:mr-0 ${curr === index ? 'border-color1' : 'border-transparent'}`}
+            className={`m-2 flex w-[25%] cursor-pointer rounded-lg border-2 first-of-type:ml-0 last-of-type:mr-0 ${curr === index ? 'border-color5' : 'border-transparent'}`}
             onClick={() => setCurr(index)}
           >
             <Image
