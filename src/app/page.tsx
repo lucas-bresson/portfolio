@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import bookmark from '/public/home/bookmark.png';
 import clipboard from '/public/home/clipboard.png';
 import shortly from '/public/home/shortly.png';
@@ -21,6 +21,7 @@ import memoryGameThumbnail from '/public/home/memory-game-thumbnail.png';
 import pomodoroThumbnail from '/public/home/pomodoro-thumbnail.png';
 import multiStepFormThumbnail from '/public/home/multi-step-form-thumbnail.png';
 import Carousel from './ui/components/Carousel';
+import { useTheme } from 'next-themes';
 
 const LANDINGS_PAGES = [
   {
@@ -84,6 +85,11 @@ const APPLICATIONS = [
 
 export default function Page() {
   const [switchOn, setSwitchOn] = useState(false);
+  const { setTheme } = useTheme();
+
+  useEffect(() => {
+    setTheme('light');
+  }, []);
 
   return (
     <div className={`h-screen bg-gradient-to-b from-color1 to-color2`}>

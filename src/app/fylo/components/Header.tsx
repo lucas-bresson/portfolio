@@ -1,4 +1,8 @@
+import { useTheme } from 'next-themes';
+
 export default function Header() {
+  const { theme, setTheme } = useTheme();
+
   return (
     <header className="container mx-auto h-40 px-6 text-center md:h-20">
       <div className="left-10 top-10 mx-auto h-20 w-48 bg-logo-light-mode bg-no-repeat md:absolute md:mx-0 dark:bg-logo-dark-mode" />
@@ -11,7 +15,7 @@ export default function Header() {
         </a>
         <button
           className="rounded-lg p-2.5 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-          onClick={() => {}}
+          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
         >
           <svg
             id="theme-toggle-dark-icon"
