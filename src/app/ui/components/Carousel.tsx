@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
-import iconPrevious from '/public/sneakers-ecommerce/icon-previous.svg';
-import iconNext from '/public/sneakers-ecommerce/icon-next.svg';
 
 const Carousel = ({
   slides,
@@ -17,15 +15,9 @@ const Carousel = ({
   const [curr, setCurr] = useState(0);
   const router = useRouter();
 
-  const prev = () =>
-    setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
-
-  const next = () =>
-    setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
-
   return (
     <div className="relative overflow-hidden">
-      <div className="overflow-hidden md:rounded-xl">
+      <div className="overflow-hidden rounded-xl">
         <div
           className={`flex cursor-pointer transition-transform duration-700 ease-out`}
           style={{ transform: `translateX(-${curr * 100}%)` }}
@@ -41,21 +33,6 @@ const Carousel = ({
           ))}
         </div>
       </div>
-      <div className="absolute inset-0 flex items-center justify-between p-4 md:hidden">
-        <button
-          onClick={prev}
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 shadow hover:bg-white"
-        >
-          <Image src={iconPrevious} alt="previous" className="h-4 w-3" />
-        </button>
-        <button
-          onClick={next}
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 shadow hover:bg-white"
-        >
-          <Image src={iconNext} alt="previous" className="h-4 w-3" />
-        </button>
-      </div>
-
       <div className="mt-2 flex flex-1">
         {slides.map((slide, index) => (
           <div

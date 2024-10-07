@@ -94,7 +94,7 @@ export default function Page() {
   return (
     <div className={`h-screen bg-gradient-to-b from-color1 to-color2`}>
       <div className="flex flex-col">
-        <div className="right-12 top-12 z-10 mt-8 space-x-6 text-center font-semibold text-color5 sm:text-lg xl:absolute xl:mt-0">
+        <div className="right-12 top-12 z-10 mt-8 space-x-6 text-center text-sm font-semibold text-color5 sm:text-lg xl:absolute xl:mt-0">
           <Link className="hover:text-color4" href="#">
             CV
           </Link>
@@ -129,7 +129,7 @@ export default function Page() {
           </span>
         </h1>
         <label>
-          <div className="absolute my-8 flex w-full cursor-pointer items-center justify-center space-x-4 sm:my-12">
+          <div className="absolute my-6 flex w-full cursor-pointer items-center justify-center space-x-4 sm:my-12 md:my-8">
             <input
               type="checkbox"
               value=""
@@ -137,30 +137,30 @@ export default function Page() {
               onClick={() => setSwitchOn((x) => !x)}
             />
             <div
-              className={`text-lg font-semibold uppercase opacity-80 hover:opacity-100 sm:text-xl ${switchOn ? 'text-color4' : 'text-color5'}`}
+              className={`text-xs font-semibold uppercase opacity-80 hover:opacity-100 sm:text-xl md:text-lg ${switchOn ? 'text-color4' : 'text-color5'}`}
             >
               Landing pages
             </div>
             <div className="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-color3 peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-blue-800"></div>
             <div
-              className={`text-lg font-semibold uppercase opacity-80 hover:opacity-100 sm:text-xl ${switchOn ? 'text-color5' : 'text-color4'}`}
+              className={`text-xs font-semibold uppercase opacity-80 hover:opacity-100 sm:text-xl md:text-lg ${switchOn ? 'text-color5' : 'text-color4'}`}
             >
               Applications
             </div>
           </div>
         </label>
         <div
-          className={`mx-auto flex h-screen max-w-lg flex-col justify-center space-y-12 transition-opacity duration-1000 ease-in-out sm:pt-16`}
+          className={`mx-4 flex max-w-lg flex-col justify-center space-y-12 transition-opacity duration-1000 ease-in-out sm:pt-16 md:mx-auto`}
         >
+          <div
+            className={`mt-24 transition-opacity duration-1000 ${switchOn ? 'opacity-0' : 'opacity-100'}`}
+          >
+            {!switchOn && <Carousel slides={LANDINGS_PAGES} />}
+          </div>
           <div
             className={`transition-opacity duration-1000 ${switchOn ? 'opacity-100' : 'opacity-0'}`}
           >
             {switchOn && <Carousel slides={APPLICATIONS} />}
-          </div>
-          <div
-            className={`transition-opacity duration-1000 ${switchOn ? 'opacity-0' : 'opacity-100'}`}
-          >
-            {!switchOn && <Carousel slides={LANDINGS_PAGES} />}
           </div>
         </div>
       </div>
