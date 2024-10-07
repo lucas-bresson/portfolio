@@ -15,7 +15,7 @@ export default function TestimonialsSection() {
             className="absolute -top-2 left-1 w-10 md:-top-16 md:w-20"
           />
 
-          <div className="flex flex-col space-y-6 rounded-lg bg-gray-100 p-10 md:w-1/3 dark:bg-darkBlue3">
+          <div className="dark:bg-richOcean flex flex-col space-y-6 rounded-lg bg-gray-100 p-10 md:w-1/3">
             <p className="text-sm leading-5 md:text-lg">
               Fylo has improved our team productivity by an order of magnitude.
               Since making the switch our team has become a well-oiled
@@ -30,7 +30,7 @@ export default function TestimonialsSection() {
             </div>
           </div>
 
-          <div className="flex flex-col space-y-6 rounded-lg bg-gray-100 p-10 md:w-1/3 dark:bg-darkBlue3">
+          <div className="dark:bg-richOcean flex flex-col space-y-6 rounded-lg bg-gray-100 p-10 md:w-1/3">
             <p className="text-sm leading-5 md:text-lg">
               Fylo has improved our team productivity by an order of magnitude.
               Since making the switch our team has become a well-oiled
@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
             </div>
           </div>
 
-          <div className="flex flex-col space-y-6 rounded-lg bg-gray-100 p-10 md:w-1/3 dark:bg-darkBlue3">
+          <div className="dark:bg-richOcean flex flex-col space-y-6 rounded-lg bg-gray-100 p-10 md:w-1/3">
             <p className="text-sm leading-5 md:text-lg">
               Fylo has improved our team productivity by an order of magnitude.
               Since making the switch our team has become a well-oiled

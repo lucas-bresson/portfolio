@@ -9,7 +9,7 @@ export default function HeroSection() {
           <h1 className="text-center text-3xl font-semibold lg:text-left lg:text-6xl">
             A Simple Bookmark Manager
           </h1>
-          <p className="max-x-md mx-auto text-center text-lg text-gray-400 lg:mx-0 lg:mt-0 lg:text-left lg:text-2xl">
+          <p className="max-x-md text-fadedSteel mx-auto text-center text-lg lg:mx-0 lg:mt-0 lg:text-left lg:text-2xl">
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free

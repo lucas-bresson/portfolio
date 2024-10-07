@@ -11,7 +11,7 @@ export default function StepsMenu({
         {steps.map(({ id, text }) => (
           <li key={id} className="flex items-center space-x-4">
             <div
-              className={`flex h-10 w-10 items-center justify-center rounded-full border text-lg font-bold ${currentStep === id ? 'border-none bg-pastelBlue2 text-marineBlue' : 'bg-transparent'}`}
+              className={`flex h-10 w-10 items-center justify-center rounded-full border text-lg font-bold ${currentStep === id ? 'bg-lightSkyBlue border-none text-marineBlue' : 'bg-transparent'}`}
             >
               {id + 1}
             </div>

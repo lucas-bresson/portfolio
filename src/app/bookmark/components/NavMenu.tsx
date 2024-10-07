@@ -10,7 +10,7 @@ export default function NavMenu() {
       <div className="my-6 flex items-center justify-between space-x-20">
         <Image id="logo" src={logo} alt="logo" />
 
-        <div className="hidden items-center space-x-10 uppercase text-grayishBlue md:flex">
+        <div className="text-fadedSteel hidden items-center space-x-10 uppercase md:flex">
           <a href="#features" className="tracking-widest hover:text-softRed">
             Features
           </a>
@@ -33,13 +33,13 @@ export default function NavMenu() {
           onClick={() => setHamburger((x) => !x)}
         >
           <span
-            className={`hamburger-top ${hamburger ? 'bg-white' : 'bg-veryDarkBlue'}`}
+            className={`hamburger-top ${hamburger ? 'bg-white' : 'bg-shadowyNavy'}`}
           />
           <span
-            className={`hamburger-middle ${hamburger ? 'bg-white' : 'bg-veryDarkBlue'}`}
+            className={`hamburger-middle ${hamburger ? 'bg-white' : 'bg-shadowyNavy'}`}
           />
           <span
-            className={`hamburger-bottom ${hamburger ? 'bg-white' : 'bg-veryDarkBlue'}`}
+            className={`hamburger-bottom ${hamburger ? 'bg-white' : 'bg-shadowyNavy'}`}
           />
         </button>
       </div>
@@ -47,7 +47,7 @@ export default function NavMenu() {
       <div
         className={`fixed inset-0 z-20 ${
           hamburger ? 'flex' : 'hidden'
-        } m-h-screen h-full w-full flex-col items-center divide-y divide-gray-500 self-end bg-veryDarkBlue px-6 py-1 pb-4 pt-24 uppercase tracking-widest text-white opacity-90`}
+        } m-h-screen bg-shadowyNavy h-full w-full flex-col items-center divide-y divide-gray-500 self-end px-6 py-1 pb-4 pt-24 uppercase tracking-widest text-white opacity-90`}
       >
         <div className="w-full py-3 text-center">
           <a href="#features" className="block hover:text-softRed">

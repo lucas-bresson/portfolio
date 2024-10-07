@@ -37,7 +37,7 @@ const Carousel = ({
         {slides.map((slide, index) => (
           <div
             key={slide.alt}
-            className={`m-2 flex w-[25%] cursor-pointer rounded-lg border-2 first-of-type:ml-0 last-of-type:mr-0 ${curr === index ? 'border-color5' : 'border-transparent'}`}
+            className={`m-2 flex w-[25%] cursor-pointer rounded-lg border-2 first-of-type:ml-0 last-of-type:mr-0 ${curr === index ? 'border-lightAsh' : 'border-transparent'}`}
             onClick={() => setCurr(index)}
           >
             <Image

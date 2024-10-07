@@ -21,7 +21,9 @@ export default function Page() {
   }, []);
 
   return (
-    <div className={`dark:bg-darkBlue dark:text-white ${openSans.className}`}>
+    <div
+      className={`dark:bg-darkBlue dark:text-white ${openSans.className} pt-8`}
+    >
       <Header />
       <HeroSection />
       <FeaturesSection />

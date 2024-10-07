@@ -7,7 +7,7 @@ import iconPhone from '/public/fylo/icon-phone.svg';
 
 export default function Footer() {
   return (
-    <footer className="bg-darkBlue2 text-white">
+    <footer className="bg-midnightBlue text-white">
       <div className="container mx-auto px-5 pb-10 pt-12">
         <div className="flex flex-col justify-between space-y-24 md:flex-row md:space-y-0">
           <div className="mt-10 space-y-6">

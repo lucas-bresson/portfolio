@@ -92,39 +92,41 @@ export default function Page() {
   }, []);
 
   return (
-    <div className={`h-screen bg-gradient-to-b from-color1 to-color2`}>
+    <div
+      className={`from-deepCharcoalGray to-slateGray h-screen bg-gradient-to-b`}
+    >
       <div className="flex flex-col">
-        <div className="right-12 top-12 z-10 mt-8 space-x-6 text-center text-sm font-semibold text-color5 sm:text-lg xl:absolute xl:mt-0">
-          <Link className="hover:text-color4" href="#">
+        <div className="text-lightAsh right-12 top-12 z-10 mt-8 space-x-6 text-center text-sm font-semibold sm:text-lg xl:absolute xl:mt-0">
+          <Link className="hover:text-mutedTeal" href="#">
             CV
           </Link>
           <Link
-            className="hover:text-color4"
+            className="hover:text-mutedTeal"
             target="_blank"
             href="https://www.linkedin.com/in/lucas-bresson/"
           >
             LinkedIn
           </Link>
           <Link
-            className="hover:text-color4"
+            className="hover:text-mutedTeal"
             target="_blank"
             href="https://github.com/lucas-bresson"
           >
             Github
           </Link>
         </div>
-        <h1 className="absolute left-12 top-12 z-10 mx-auto hidden max-w-lg text-lg text-color5 2xl:block">
+        <h1 className="text-lightAsh absolute left-12 top-12 z-10 mx-auto hidden max-w-lg text-lg 2xl:block">
           Hi, I am a french software engineer. <br />I have built following
           landing pages & applications using
-          <span className="ms-2 rounded bg-color3 px-2.5 py-0.5 text-lg font-bold text-color5">
+          <span className="bg-oceanBlue text-lightAsh ms-2 rounded px-2.5 py-0.5 text-lg font-bold">
             Next.js
           </span>
           ,
-          <span className="ms-2 rounded bg-color3 px-2.5 py-0.5 text-lg font-bold text-color5">
+          <span className="bg-oceanBlue text-lightAsh ms-2 rounded px-2.5 py-0.5 text-lg font-bold">
             TypeScript
           </span>
           ,
-          <span className="ms-2 rounded bg-color3 px-2.5 py-0.5 text-lg font-bold text-color5">
+          <span className="bg-oceanBlue text-lightAsh ms-2 rounded px-2.5 py-0.5 text-lg font-bold">
             Tailwind
           </span>
         </h1>
@@ -137,13 +139,13 @@ export default function Page() {
               onClick={() => setSwitchOn((x) => !x)}
             />
             <div
-              className={`text-xs font-semibold uppercase opacity-80 hover:opacity-100 sm:text-xl md:text-lg ${switchOn ? 'text-color4' : 'text-color5'}`}
+              className={`text-xs font-semibold uppercase opacity-80 hover:opacity-100 sm:text-xl md:text-lg ${switchOn ? 'text-mutedTeal' : 'text-lightAsh'}`}
             >
               Landing pages
             </div>
-            <div className="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-color3 peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-blue-800"></div>
+            <div className="peer-checked:bg-oceanBlue peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-blue-800"></div>
             <div
-              className={`text-xs font-semibold uppercase opacity-80 hover:opacity-100 sm:text-xl md:text-lg ${switchOn ? 'text-color5' : 'text-color4'}`}
+              className={`text-xs font-semibold uppercase opacity-80 hover:opacity-100 sm:text-xl md:text-lg ${switchOn ? 'text-lightAsh' : 'text-mutedTeal'}`}
             >
               Applications
             </div>
