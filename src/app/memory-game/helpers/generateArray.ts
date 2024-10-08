@@ -19,6 +19,7 @@ export default function generateArray({
 }) {
   const array: number[] = [];
   const uniqueNumbers = grid === '4x4' ? 8 : 18;
+  console.log('theme', theme)
 
   for (let i = 0; i < uniqueNumbers; i++) {
     const item = Math.floor(Math.random() * 36);
