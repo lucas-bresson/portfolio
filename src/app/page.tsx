@@ -89,14 +89,14 @@ export default function Page() {
 
   useEffect(() => {
     setTheme('light');
-  }, []);
+  }, [setTheme]);
 
   return (
     <div
-      className={`from-deepCharcoalGray to-slateGray h-screen bg-gradient-to-b`}
+      className={`h-screen bg-gradient-to-b from-deepCharcoalGray to-slateGray`}
     >
       <div className="flex flex-col">
-        <div className="text-lightAsh right-12 top-12 z-10 mt-8 space-x-6 text-center text-sm font-semibold sm:text-lg xl:absolute xl:mt-0">
+        <div className="right-12 top-12 z-10 mt-8 space-x-6 text-center text-sm font-semibold text-lightAsh sm:text-lg xl:absolute xl:mt-0">
           <Link className="hover:text-mutedTeal" href="#">
             CV
           </Link>
@@ -115,18 +115,18 @@ export default function Page() {
             Github
           </Link>
         </div>
-        <h1 className="text-lightAsh absolute left-12 top-12 z-10 mx-auto hidden max-w-lg text-lg 2xl:block">
+        <h1 className="absolute left-12 top-12 z-10 mx-auto hidden max-w-lg text-lg text-lightAsh 2xl:block">
           Hi, I am a french software engineer. <br />I have built following
           landing pages & applications using
-          <span className="bg-oceanBlue text-lightAsh ms-2 rounded px-2.5 py-0.5 text-lg font-bold">
+          <span className="ms-2 rounded bg-oceanBlue px-2.5 py-0.5 text-lg font-bold text-lightAsh">
             Next.js
           </span>
           ,
-          <span className="bg-oceanBlue text-lightAsh ms-2 rounded px-2.5 py-0.5 text-lg font-bold">
+          <span className="ms-2 rounded bg-oceanBlue px-2.5 py-0.5 text-lg font-bold text-lightAsh">
             TypeScript
           </span>
           ,
-          <span className="bg-oceanBlue text-lightAsh ms-2 rounded px-2.5 py-0.5 text-lg font-bold">
+          <span className="ms-2 rounded bg-oceanBlue px-2.5 py-0.5 text-lg font-bold text-lightAsh">
             Tailwind
           </span>
         </h1>
@@ -143,7 +143,7 @@ export default function Page() {
             >
               Landing pages
             </div>
-            <div className="peer-checked:bg-oceanBlue peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-blue-800"></div>
+            <div className="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-oceanBlue peer-checked:after:translate-x-full peer-checked:after:border-white dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-blue-800 rtl:peer-checked:after:-translate-x-full"></div>
             <div
               className={`text-xs font-semibold uppercase opacity-80 hover:opacity-100 sm:text-xl md:text-lg ${switchOn ? 'text-lightAsh' : 'text-mutedTeal'}`}
             >

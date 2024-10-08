@@ -27,7 +27,7 @@ export default function Page() {
   const [moves, setMoves] = useState(0);
   const [isOver, setIsOver] = useState(false);
 
-  const { players, theme, grid } = settings;
+  const { players, grid } = settings;
   const isSelectingSettings = !settings.players;
 
   const restart = useCallback(() => {

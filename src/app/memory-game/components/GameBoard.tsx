@@ -12,7 +12,7 @@ export default function GameBoard({
   grid: string;
   flippedIndex: number[];
   activeIndex: number[];
-  selectItem: (index: number) => void;
+  selectItem: any;
   restart: () => void;
 }) {
   useEffect(() => restart(), [restart]);

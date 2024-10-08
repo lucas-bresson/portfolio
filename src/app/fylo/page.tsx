@@ -18,7 +18,7 @@ export default function Page() {
     setTheme('dark');
 
     return () => setTheme('light');
-  }, []);
+  }, [setTheme]);
 
   return (
     <div
