@@ -131,7 +131,7 @@ export default function Page() {
           </span>
         </h1>
         <label>
-          <div className="absolute my-6 flex w-full cursor-pointer items-center justify-center space-x-4 sm:my-12 md:my-8">
+          <div className="absolute my-6 flex w-full cursor-pointer items-center justify-center space-x-4 sm:my-12">
             <input
               type="checkbox"
               value=""
@@ -152,7 +152,7 @@ export default function Page() {
           </div>
         </label>
         <div
-          className={`mx-4 mx-auto flex flex-col justify-center space-y-12 transition-opacity duration-1000 ease-in-out sm:pt-16 md:mx-auto`}
+          className={`mx-auto flex flex-col justify-center space-y-12 transition-opacity duration-1000 ease-in-out sm:pt-16`}
         >
           <div
             className={`mt-24 max-w-lg transition-opacity duration-1000 ${switchOn ? 'opacity-0' : 'opacity-100'}`}
