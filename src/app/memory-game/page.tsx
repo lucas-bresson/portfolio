@@ -27,11 +27,11 @@ export default function Page() {
   const [moves, setMoves] = useState(0);
   const [isOver, setIsOver] = useState(false);
 
-  const { players, grid } = settings;
+  const { theme, players, grid } = settings;
   const isSelectingSettings = !settings.players;
 
   const restart = useCallback(() => {
-    const newArray = generateArray({ theme: 'numbers', grid });
+    const newArray = generateArray({ theme, grid });
     setArray(newArray);
     setActiveIndex([]);
     setFlippedIndex([]);
@@ -41,7 +41,7 @@ export default function Page() {
     startTimer();
     setMoves(0);
     setCurrentPlayer(1);
-  }, [grid, startTimer, resetTimer]);
+  }, [grid, theme]);
 
   const newGame = () => {
     setSettings(initialSettings);
@@ -101,9 +101,10 @@ export default function Page() {
         <Settings setSettings={setSettings} />
       ) : (
         <div className="flex h-screen flex-col justify-between px-10 lg:px-20">
-          <GameHeader restart={restart} newGame={newGame} />
+          <GameHeader theme={theme} restart={restart} newGame={newGame} />
           <GameBoard
             array={array}
+            theme={theme}
             grid={grid}
             flippedIndex={flippedIndex}
             activeIndex={activeIndex}

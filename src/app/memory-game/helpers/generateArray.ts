@@ -17,21 +17,33 @@ export default function generateArray({
   theme: string;
   grid: string;
 }) {
+  
   const array: number[] = [];
-  const uniqueNumbers = grid === '4x4' ? 8 : 18;
-  console.log('theme', theme)
+  const isSmallGrid = grid === '4x4'
+  
+  if (theme === 'numbers') {
+    const uniqueNumbers = isSmallGrid ? 8 : 18;
 
-  for (let i = 0; i < uniqueNumbers; i++) {
-    const item = Math.floor(Math.random() * 36);
-    if (!array.includes(item)) {
-      array.push(item);
-      array.push(item);
+      for (let i = 0; i < uniqueNumbers; i++) {
+        const n = Math.floor(Math.random() * 36);
+
+        if (array.includes(n)) {
+          const increment = Math.floor(Math.random() * 36) + 36;
+          array.push(n + increment, n + increment);
+        } else {
+          array.push(n, n);
+        }
+      }
+
+  }
+  
+  if (theme === 'birds') {
+    if (isSmallGrid) {
+      [1,2,3,4,5,6,7,8].forEach(n => array.push(n, n))
     } else {
-      const increment = Math.floor(Math.random() * 36) + 36;
-      array.push(item + increment);
-      array.push(item + increment);
+      [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18].forEach(n => array.push(n, n))
     }
   }
-
+  
   return shuffleArray(array);
 }

@@ -1,13 +1,20 @@
 export default function GameHeader({
+  theme,
   restart,
   newGame,
 }: {
+  theme: string;
   restart: () => void;
   newGame: () => void;
 }) {
   return (
     <section className="flex items-center justify-between pt-8">
-      <div className="text-2xl font-bold text-darkBlue lg:text-3xl">memory</div>
+      <div className="flex flex-col">
+        <div className="text-2xl font-bold text-darkBlue lg:text-3xl">
+          memory
+        </div>
+        <div className="font-semibold text-amber-500">{theme}</div>
+      </div>
       <div className="space-x-4 font-bold lg:text-lg">
         <button
           onClick={restart}
