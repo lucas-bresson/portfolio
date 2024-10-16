@@ -160,7 +160,7 @@ export default function Page() {
             {!switchOn && <Carousel slides={LANDINGS_PAGES} />}
           </div>
           <div
-            className={`max-w-sm transition-opacity duration-1000 ${switchOn ? 'opacity-100' : 'opacity-0'}`}
+            className={`max-w-lg transition-opacity duration-1000 ${switchOn ? 'opacity-100' : 'opacity-0'}`}
           >
             {switchOn && <Carousel slides={APPLICATIONS} />}
           </div>
