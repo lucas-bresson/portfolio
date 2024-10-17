@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import React from 'react';
+import NavigateNextButton from './ui/components/NavigateNextButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,7 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
+        <ThemeProvider attribute="class">
+          {children}
+          <NavigateNextButton />
+        </ThemeProvider>
       </body>
     </html>
   );
